@@ -1,19 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<?xml:stylesheet type="text/xsl" href="msi.xsl" ?>
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="msi.xsl" ?>
 <!--
       XML Dump of Windows Installer Database
-      Created with msi2xml 1.1
+      Created with msi2xml
 
-      (C) 2001 Daniel Gehriger (gehriger@linkcad.com)
+      (C) 2001-2002 Daniel Gehriger (gehriger@linkcad.com)
 -->
 <!DOCTYPE msi [
    <!ELEMENT msi   (summary,table*)>
-   <!ATTLIST msi version   CDATA #REQUIRED>
-   <!ATTLIST msi xmlns:dt  CDATA #IMPLIED>
+   <!ATTLIST msi version    CDATA #REQUIRED>
+   <!ATTLIST msi xmlns:dt   CDATA #IMPLIED
+                 codepage   CDATA #IMPLIED
+                 compression (MSZIP|LZX|none) "LZX">
+   
    <!ELEMENT summary       (codepage?,title?,subject?,author?,keywords?,comments?,
                             template,lastauthor?,revnumber,lastprinted?,
                             createdtm?,lastsavedtm?,pagecount,wordcount,
                             charcount?,appname?,security?)>
+                            
    <!ELEMENT codepage      (#PCDATA)>
    <!ELEMENT title         (#PCDATA)>
    <!ELEMENT subject       (#PCDATA)>
@@ -30,23 +34,26 @@
    <!ELEMENT wordcount     (#PCDATA)>
    <!ELEMENT charcount     (#PCDATA)>
    <!ELEMENT appname       (#PCDATA)>
-   <!ELEMENT security      (#PCDATA)>
+   <!ELEMENT security      (#PCDATA)>                            
+                                
    <!ELEMENT table         (col+,row*)>
    <!ATTLIST table
-                 name      CDATA #REQUIRED>
+                name        CDATA #REQUIRED>
 
    <!ELEMENT col           (#PCDATA)>
    <!ATTLIST col
                  key       (yes|no) #IMPLIED
                  def       CDATA #IMPLIED>
-   <!ELEMENT row (td+)>
-   <!ELEMENT td            (#PCDATA)>
+                 
+   <!ELEMENT row            (td+)>
+   
+   <!ELEMENT td             (#PCDATA)>
    <!ATTLIST td
-                 href      CDATA #IMPLIED
+                 href       CDATA #IMPLIED
                  dt:dt     (string|bin.base64) #IMPLIED
-                 md5       CDATA #IMPLIED>
+                 md5        CDATA #IMPLIED>
 ]>
-<msi version="1.1" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+<msi version="2.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" codepage="1252">
 	
 	<summary>
 		<codepage>1252</codepage>
@@ -57,10 +64,10 @@
 		<comments></comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{434F4404-FD41-4729-AA44-AD48AD5287A6}</revnumber>
+		<revnumber>{C4A569BD-A3A3-45C4-9C6D-2F181DF68F8C}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/19/2003 01:45</lastsavedtm>
+		<lastsavedtm>09/20/2003 23:52</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -621,10 +628,6 @@
 			<td>Signature_reg_personal_saver</td>
 		</row>
 		<row>
-			<td>PERSONAL_STARTUP_FOLDER</td>
-			<td>Signature_reg_personal_startup_folder</td>
-		</row>
-		<row>
 			<td>TARGETDIR</td>
 			<td>Signature_reg_mru_client</td>
 		</row>
@@ -635,23 +638,19 @@
 		<col def="v0">Data</col>
 		<row>
 			<td>BannerBitmap.bmp</td>
-			<td href="./Binary_BannerBitmap.bmp" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
+			<td href="streams/Binary.BannerBitmap.bmp" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
 		</row>
 		<row>
 			<td>MsiLib.dll</td>
-			<td href="./Binary_MsiLib.dll" md5="a3116017724cd45b32903a6912d4d78f"/>
+			<td href="streams/Binary.MsiLib.dll" md5="2ac09caa4bec285dfa548d8dfad252a8"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
-			<td href="./Binary_NewFldrBtn.bmp" md5="326a40f5ae0f716a3818531e475678bf"/>
-		</row>
-		<row>
-			<td>ReadDnetcId.vbs</td>
-			<td href="./Binary_ReadDnetcId.vbs" md5="217312e00e4eb98f3eba2bc46a966a3e"/>
+			<td href="streams/Binary.NewFldrBtn.bmp" md5="326a40f5ae0f716a3818531e475678bf"/>
 		</row>
 		<row>
 			<td>UpFldrBtn.bmp</td>
-			<td href="./Binary_UpFldrBtn.bmp" md5="4638b2aa55fbd0fa73bb08181895cbe7"/>
+			<td href="streams/Binary.UpFldrBtn.bmp" md5="4638b2aa55fbd0fa73bb08181895cbe7"/>
 		</row>
 	</table>
 
@@ -694,7 +693,7 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
+			<td>dnetc.exe</td>
 		</row>
 		<row>
 			<td>ComponentClientShortcuts</td>
@@ -710,7 +709,7 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>_91B13C3D1A09428C8792D0E112AC8D6F</td>
+			<td>changes.txt</td>
 		</row>
 		<row>
 			<td>ComponentDocsShortcuts</td>
@@ -758,7 +757,7 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>_6F01E41A193D46E489224BA835B927CF</td>
+			<td>dnetc.scr</td>
 		</row>
 		<row>
 			<td>RemoveObsolete</td>
@@ -5170,13 +5169,13 @@ Click "Close" to exit.</td>
 		<row>
 			<td>RUNCA_CONFIG_DNETC</td>
 			<td>18</td>
-			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
+			<td>dnetc.exe</td>
 			<td>-config</td>
 		</row>
 		<row>
 			<td>RUNCA_INSTALL_DNETC</td>
 			<td>18</td>
-			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
+			<td>dnetc.exe</td>
 			<td>-quiet -install</td>
 		</row>
 		<row>
@@ -5184,6 +5183,12 @@ Click "Close" to exit.</td>
 			<td>1</td>
 			<td>MsiLib.dll</td>
 			<td>_KillRunningClientWindows@4</td>
+		</row>
+		<row>
+			<td>RUNCA_PERSONALSTARTUPFOLDER</td>
+			<td>1</td>
+			<td>MsiLib.dll</td>
+			<td>_SetDirectoryPersonalStartupFolder@4</td>
 		</row>
 		<row>
 			<td>RUNCA_READ_DNETC_ID</td>
@@ -5545,7 +5550,7 @@ Click "Close" to exit.</td>
 			<td>uninst|uninst</td>
 		</row>
 		<row>
-			<td>PERSONAL_STARTUP_FOLDER</td>
+			<td>PersonalStartupFolder</td>
 			<td>StartupFolder</td>
 			<td>.</td>
 		</row>
@@ -5616,7 +5621,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>Local0001</td>
 			<td>ComponentSaver</td>
-			<td>_6F01E41A193D46E489224BA835B927CF</td>
+			<td>dnetc.scr</td>
 			<td>dnetc.scr</td>
 			<td>WindowsFolder</td>
 		</row>
@@ -5866,37 +5871,17 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td>_6F01E41A193D46E489224BA835B927CF</td>
-			<td>ComponentSaver</td>
-			<td>DNETC.SCR|dnetc.scr</td>
-			<td>27648</td>
-			<td>2.95.483.0</td>
-			<td>1033</td>
-			<td>512</td>
-			<td>1</td>
-		</row>
-		<row>
-			<td>_91B13C3D1A09428C8792D0E112AC8D6F</td>
+			<td href="media/changes.txt" md5="d86ea8eee66ec4782dfce10c86359c9d">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>52075</td>
+			<td>41429</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td>_A5AC63DD4E774855982836DF6D167D30</td>
-			<td>ComponentDocs</td>
-			<td>README.TXT|readme.txt</td>
-			<td>17995</td>
-			<td/>
-			<td/>
-			<td>512</td>
-			<td>3</td>
-		</row>
-		<row>
-			<td>_ACD7B637487440F89E05B515C1118EF8</td>
+			<td href="media/dnetc.chm" md5="bb5fd37c3527f4b63c6df3313abf1942">dnetc.chm</td>
 			<td>ComponentDocs</td>
 			<td>DNETC.CHM|dnetc.chm</td>
 			<td>42676</td>
@@ -5906,34 +5891,54 @@ Click "Close" to exit.</td>
 			<td>4</td>
 		</row>
 		<row>
-			<td>_B3769BA573F04AD78977146DDE08A10E</td>
+			<td href="media/dnetc.com" md5="9c6d3a41c8cc70443cab9f9938cff855">dnetc.com</td>
+			<td>ComponentClient</td>
+			<td>DNETC.COM|dnetc.com</td>
+			<td>5632</td>
+			<td/>
+			<td/>
+			<td>512</td>
+			<td>7</td>
+		</row>
+		<row>
+			<td href="media/dnetc.exe" md5="768c6fe177dbd70eaea168ca7778b63a">dnetc.exe</td>
+			<td>ComponentClient</td>
+			<td>DNETC.EXE|dnetc.exe</td>
+			<td>205312</td>
+			<td>2.8012.465.0</td>
+			<td>1033</td>
+			<td>512</td>
+			<td>6</td>
+		</row>
+		<row>
+			<td href="media/dnetc.scr" md5="b28811e6333a10549b72dc074f68d134">dnetc.scr</td>
+			<td>ComponentSaver</td>
+			<td>DNETC.SCR|dnetc.scr</td>
+			<td>35328</td>
+			<td>2.95.483.0</td>
+			<td>1033</td>
+			<td>512</td>
+			<td>1</td>
+		</row>
+		<row>
+			<td href="media/dnetc.txt" md5="c67c9a0ed58ab32e1c4ad9481d577b13">dnetc.txt</td>
 			<td>ComponentDocs</td>
 			<td>DNETC.TXT|dnetc.txt</td>
-			<td>15716</td>
+			<td>15680</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>5</td>
 		</row>
 		<row>
-			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
-			<td>ComponentClient</td>
-			<td>DNETC.EXE|dnetc.exe</td>
-			<td>212992</td>
-			<td>2.95.483.0</td>
-			<td>1033</td>
-			<td>512</td>
-			<td>6</td>
-		</row>
-		<row>
-			<td>_E3662F3A371649DF8704221BCCA0566E</td>
-			<td>ComponentClient</td>
-			<td>DNETC.COM|dnetc.com</td>
-			<td>6656</td>
+			<td href="media/readme.txt" md5="f32ccdb350f286da05919d28bbc39ef5">readme.txt</td>
+			<td>ComponentDocs</td>
+			<td>README.TXT|readme.txt</td>
+			<td>15950</td>
 			<td/>
 			<td/>
 			<td>512</td>
-			<td>7</td>
+			<td>3</td>
 		</row>
 	</table>
 
@@ -5942,7 +5947,7 @@ Click "Close" to exit.</td>
 		<col def="v0">Data</col>
 		<row>
 			<td>_18be6784.exe</td>
-			<td href="./Icon__18be6784.exe" md5="a50aa3e69996b01df6cc1455927446a9"/>
+			<td href="streams/Icon._18be6784.exe" md5="a50aa3e69996b01df6cc1455927446a9"/>
 		</row>
 	</table>
 
@@ -6149,6 +6154,11 @@ Click "Close" to exit.</td>
 			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
 			<td/>
 			<td>1902</td>
+		</row>
+		<row>
+			<td>RUNCA_PERSONALSTARTUPFOLDER</td>
+			<td>NOT Installed</td>
+			<td>751</td>
 		</row>
 		<row>
 			<td>RUNCA_STOP_DNETC</td>
@@ -6678,12 +6688,8 @@ Click "Close" to exit.</td>
 			<td>Distributed Computing Technologies, Inc.</td>
 		</row>
 		<row>
-			<td>PERSONAL_STARTUP_FOLDER</td>
-			<td>.</td>
-		</row>
-		<row>
 			<td>ProductCode</td>
-			<td>{03528BFB-ED30-4629-8440-7F97EC863FE1}</td>
+			<td>{14CAB7E8-173E-41B9-880D-4C5E81358650}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6695,7 +6701,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>2.95.483.0</td>
+			<td>2.8012.465.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
@@ -6800,17 +6806,6 @@ Click "Close" to exit.</td>
 		<row>
 			<td>DNETC_STARTMODE</td>
 			<td>3</td>
-			<td>MyStartup</td>
-			<td>0</td>
-			<td>72</td>
-			<td>348</td>
-			<td>17</td>
-			<td>Automatic start after I log in, via my "Startup" group</td>
-			<td/>
-		</row>
-		<row>
-			<td>DNETC_STARTMODE</td>
-			<td>4</td>
 			<td>Service</td>
 			<td>0</td>
 			<td>36</td>
@@ -6821,13 +6816,24 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>DNETC_STARTMODE</td>
-			<td>5</td>
+			<td>4</td>
 			<td>MySaver</td>
 			<td>0</td>
 			<td>54</td>
 			<td>348</td>
 			<td>17</td>
 			<td>Run for me only when my screensaver is active</td>
+			<td/>
+		</row>
+		<row>
+			<td>DNETC_STARTMODE</td>
+			<td>5</td>
+			<td>MyStartup</td>
+			<td>0</td>
+			<td>72</td>
+			<td>348</td>
+			<td>17</td>
+			<td>Automatic start after I log in, via my "Startup" group</td>
 			<td/>
 		</row>
 		<row>
@@ -6872,13 +6878,6 @@ Click "Close" to exit.</td>
 			<td>1</td>
 			<td>Control Panel\Desktop</td>
 			<td>SCRNSAVE.EXE</td>
-			<td>2</td>
-		</row>
-		<row>
-			<td>Signature_reg_personal_startup_folder</td>
-			<td>1</td>
-			<td>Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</td>
-			<td>Startup</td>
 			<td>2</td>
 		</row>
 	</table>
@@ -7220,7 +7219,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>local0020</td>
-			<td>PERSONAL_STARTUP_FOLDER</td>
+			<td>PersonalStartupFolder</td>
 			<td>DNETC.LNK|distributed.net client</td>
 			<td>ComponentRunMyUserStartup</td>
 			<td>[TARGETDIR]dnetc.exe</td>
@@ -7527,7 +7526,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0</td>
-			<td/>
+			<td>2.8012.465.0</td>
 			<td/>
 			<td>258</td>
 			<td/>
@@ -7536,7 +7535,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
-			<td>1.0.0</td>
+			<td>2.8012.465.0</td>
 			<td/>
 			<td>256</td>
 			<td/>
@@ -12645,4 +12644,12 @@ Click "Close" to exit.</td>
 		</row>
 	</table>
 
+	<table name="_Streams">
+		<col key="yes" def="s62">Name</col>
+		<col def="V0">Data</col>
+		<row>
+			<td>_FAF4E86245E179AB7B2FFEC3AB420CFF</td>
+			<td href="media:_FAF4E86245E179AB7B2FFEC3AB420CFF"/>
+		</row>
+	</table>
 </msi>
