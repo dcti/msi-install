@@ -1,0 +1,740 @@
+==========================================================================
+Version bump guide:
+==========================================================================
+
+ "2.7100.123-XXX-YYMMDDHH"
+  | | |   |   |  `------'
+  | | |   |   |     |
+  | | |   |   |  bugzilla format build time stamp (time of newest module)
+  | | |   |   |  Please report this when making bug reports.
+  | | |   |   `- Build flags: GUI/CLI, SMP-aware, etc.
+  | | |   |      Please report this when making bug reports.
+  | | |   `----- Changes in /common/ code, or simply a significant number
+  | | |          of bug fixes, gets a "build fraction" change.
+  | | `--------- New cores, for any platform, will be accompanied by a
+  | |            "build version" change, ie 2.7103.x to 2.7104.x.
+  | |            New significant feature(s) also increment build version.
+  | `----------- A "client contest" change follows a code freeze at which
+  |              point the client is assumed to be stable. Code that
+  |              would make clients incompatible with previous clients or
+  |              proxies will be a accompanied by 'client contest' change.
+  `------------- Denotes a client rewrite.
+
+==========================================================================
+Version change log: $Id: CHANGES.txt,v 1.4.2.57 2000/07/06 05:17:33 cyp Exp $
+==========================================================================
+
+2.8000
+------
+
+2.8010.463  fix: linux/x86: resoloved various dns lookup, lib and
+                 portability issues by building against static libc5
+                 client runs on all elf kernels, 2.0.x - 2.4.x-preX
+            fix: win32: .462 client was taking long to shutdown.
+
+2.8010.462  fix: many: removed os-level file locking introduced in .459,
+                 didn't work reliably on some file systems, and was not
+                 really necessary anyway.
+            chg: some: smoother ^C and break handling for win16/dos/amigaos
+
+2.8010.461  new: x86: RC5/K7 core from Holger Boehring <HBoehring@hboehring.de>
+            fix: x86: Athlon Thunderbird correctly detected now.
+            fix: all: some pre-2.8000 .ini settings were not being upgraded.
+            new: macosx: 2 separate builds for MacOSX and MacOSXServer
+            new: macosx: the AltiVec cruncher is now available on MacOSX
+            new: macosx: MP support is now available under MacOSX
+            new: macosx: full LURK support under MacOSX
+            chg: macos: GUSI is in again but this time with OT support
+            new: x86-NetBSD/x86-FreeBSD/Linux support battery-power checking
+                 (hint to *BSD kernel teams: add sysctl support to apm)
+            chg: AmigaOS: now using the PowerPC OGR core
+            chg: AmigaOS: lots more general changes and fixes
+
+2.8009.460  new: ppc: new OGR PowerPC core by nate is about 12% faster
+            chg: 68k: modified glue code results in up to 4% more speed
+            chg: macos: support for all macs ever built (even 68000 based)
+            new: macos: the macos client can now run "detached"
+            fix: macos: a different networking library delivers many benefits
+            chg: macos: priority adjustment works fine now
+            new: macos: the client is now controlable through AppleScript
+            new: macos: FBA/daemon version
+            chg: macos: process detection for "pause-if-running" now works
+            new: "pause-if-CPU-temperature-exceeds" (not on all platforms)
+            new: "pause-if-running-on-batterypower" (not on all platforms)
+            new: macosx: a native (BSD subsystem) client for Server and DPs
+            chg: some: OGR is auto-disabled for non-preemptive OSs running on 
+                 low-end cpus. http://www.distributed.net/faq/cache/188.html
+            fix: NetWare: all MP (migration) issues resolved.     
+            fix: most: user changes to time-of-day won't affect "Summary:"
+            chg: AmigaOS: updated 68k cores and many changes made to bring
+                 the Amiga version up to date
+            chg: AmigaOS: switched from the sas/c compiler to gcc
+            new: AmigaOS: native WarpUp/WarpOS client for PowerPC
+            new: ppc: additional rc5 core optimized specifically for 604
+                 series PowerPCs - about 2% faster, thanks to
+                 Roberto Ragusa <robertoragusa@technologist.com>
+
+2.8008.459  new: x86: new rc5 K7 core thanks to
+                 Sean Stanek <vulture@iastate.edu>
+            new: all: the "update frequently (-frequent)" has been superceded
+                 by "additional buffer-level checking". The new option
+                 provides better control and supports one new mode
+                 "update on per-project buffer exhaustion" which enables
+                 old-style single-contest crunching (disables rotation).
+                 See also: http://www.distributed.net/faq/cache/176.html
+            new: all: out-buffer thresholds have been removed entirely;
+                 use the "additional buffer-level checking" to support
+                 updating/flushing more frequently than buffer exhaustion.
+            chg: all: time threshold uses fetch work threshold > 0 as minimum
+                 number of workunits to be fetched.
+            new: all: -btime <pn> <n> complements time-driven threshold
+            chg: all: -b[in] <pn> <n> now clears time threshold for <pn>.
+            new: all: exit flagfile filename is now configurable.
+            chg: macos: now supports all variants of System 7
+            fix: Linux: dynamic import of dns resolution functions for better
+                 glibc/libc cross compatibility (one shoe fits all again).
+            fix: winnt: pause on process handling optimized and rewritten.
+            chg: all: checkpointing now done at 10% or 10 minute intervals,
+                 instead of 10% with 10 minute minimum.
+            fix: all: project switchover no longer 'hangs'.
+            fix: all: OGR nodecount network packet ordering fixed.
+            fix: all: reported OGR noderate is no longer unacceptably high.
+            fix: all: partially complete OGR stubs are now loaded first. 
+            fix: all: will now flush to a proxy/server that is empty.
+            fix: all: setting clock back during network ops could hang.
+            fix: all: block counts during fetching do not fluctuate anymore.
+            fix: FreeBsd: timezone use for automatic keyserver pick works.
+            chg: many: file system locking on buffers where supported.
+
+2.8007.458  fix: all: the annoying OGR 1 node bug finally fixed
+            new: all: client can be configured a) to restart itself
+                 on .ini change; b) (on most platforms) to pause itself as
+                 long as process/executable x|y|z|... is running.
+            fix: win32: use NULL DACLs for CreateMutex.
+            chg: macos: numerous minor interface improvements
+            new: macos: multiprocessor support (MP 2.x enhanced)
+
+2.8006.457  fix: BeOS: work not being saved on exit
+            fix: *nix: -config hangs client
+
+2.8006.456  chg: all: OGR cores reactivated.
+            upd: BeOS: x86/ppc clients brought up to date
+
+2.8005.455  fix: all: client not rotating to next project
+            fix: win32/16: all font issues resolved
+            fix: all: fix for cosmetic 'Retrieved n of 4billion' message
+            fix: all: duplicate 'nettimeout' setting in .ini
+            chg: many: CSC cores removed from (some) clients
+
+2.8005.454  fix: all: infinite fetching from 'nowhere'.
+            fix: all: undid that persistant log open change made in .451
+
+2.8005.453  chg: client supports thresholds either as a time-factor, or
+                 as a workunit-factor. -config documentation has more info.
+                 A review of your settings is *strongly* advised.
+
+2.8004.452  chg: all: .ini option spin off from the generic [parameters]
+                 section into subsections is now complete. phew! Nothing
+                 left except "id".
+            chg: reverted log file opening on win/dos/netware/os2 to
+                 non-shared.
+
+2.8004.451  fix: OS/2: Fixed crash in -config by using different API calls
+            fix: OS/2: included the forgotten CSC-MMX core.
+            fix: win32 Alpha: network connect()
+            fix: all: 2 digit date in log-by-mail
+            fix: solaris x86: multithreading works correctly now (uses
+                 native threads bound to LWPs instead of pthreads)
+            chg: log file is opened shared on win/dos/netware/os2
+            chg: log file is opened with persistant handles on *nix
+
+2.8004.450  new: Mac OS port including Altivec core support (twice as
+                 fast as MMX on otherwise comparable hardware)
+
+2.8003.449  chg: win32: client sleeps for 10secs immediately after starting
+                 as service to allow the rest of the system to fire up first
+            fix: all: not being able to -update if offlinemode
+            fix: solaris: time stamps/elapsed time on MP boxes
+            fix: all: clients will again reset work if the core # changes
+                 (functionality was lost in 2.8002.446 - reset if client
+                 version or platform changes was unaffected).
+
+2.8003.448  new: x86: 50% faster CSC MMX core added. '6bit - bitslice'
+                 replaces '6bit - called'
+            fix: all: lines in mail/logfile are no longer truncated
+            fix: all: pause by signal (by user) and pause by filename
+                 are additive, that is, pause remains in effect as
+                 long as either one is in effect.
+            fix: all: completed/summary time is now elapsed wall clock
+                 time again
+            fix: x86: Cyrix 6x86 auto-selects CSC core #3 now.
+            imp: all: threads no longer check external flags for shutdown/
+                 pause state. Flags are 'pushed' instead, which reduces
+                 cache footprint.
+            fix: win32: win95B doesn't have a 'Lucinda Console' TrueType
+                 font, so client avoids it now.
+            chg: many: DES cores are no longer included
+            imp: all: benchmarks have greater time precision (no longer
+                 overshoot the end of the bench period)
+            chg: *nix: client setsid()s and dups std handles to /dev/null
+                 when started with -quiet/-hide
+            fix: dun config collision with no-networking resolved
+                 (dun was still active even if the networking was disabled)
+
+2.8002.447  chg: all: firewall settings in the .ini have moved to the network
+                 section. socks user:pass is now saved encoded
+            chg: if appropriate, 'Summary:' now also shows # of work units
+            chg: the cow logo is back, and is now the official mascot of
+                 all distributed.net projects :)
+
+2.8002.446  new: all: client is now called 'dnetc'
+            new: all: OGR capability
+            new: all: CSC capability
+            chg: all: more .ini options have been spun off from the
+                 generic [parameters] section into subsections
+            chg: all: each project has its own buffer settings (threshold etc)
+            chg: all: cputype option has been phased out in favor of core
+                 names/ids and each project can have its own core type
+            chg: all: -benchmark and -benchmark2 can now be limited to a
+                 single project, eg '-benchmark csc' to bench only csc
+            new: all: '-bench [project]' benches all cores for a given
+                 project (or all projects if no project is specified)
+            new: all: benchmarks are time based now (8-10 secs/16-20 secs)
+            new: win32: distribution includes a native cui wrapper
+            new: win16/32: client saves window size and position
+            chg: win32: service ID is 'dnetc' for client, 'dnetd' for pproxy
+            new: netware: complete rewrite of netware specific code
+            new: *nix: client distribution includes a man page
+            chg: all: auto keyserver name resolution now allows as many
+                 retries as there are addresses for a name.
+            rel: Mon, 15 Nov 1999 18:19:51 -0600
+                 http://lists.distributed.net/hypermail/announce/0075.html
+
+2.7100
+------
+2.7112.444  chg: ARM: cores have been partially rewritten.
+            fix: x86: K7 auto selects 'class 6', not 'RISC rotate II' core.
+            fix: x86 DOS: ^C always works now. (is now trapped in a hardware
+                 interrupt (irq1) handler rather than in the 'soft' int 23h)
+            imp: win16: scheduling and idle detection has been rewritten
+            new: win16/win32: client archive includes a screen saver. When
+                 run some _other_ screen saver in the foreground and start
+                 start client in the background. It stops the client when
+                 deactivated.
+            new: win32: client will pause itself while it sees defrag running.
+            new: FreeBSD: crunchers are now SMP aware (FBSD 3.0 and greater)
+                 "active processor count detection" also works.
+2.7110.443  new: win/*nix: support -pause and -unpause (SIGTSTP and SIGCONT
+                 respectively). Used like -restart/-shutdown etc.
+2.7110.442  new: win32: ioctl-driven network adapter online state detection.
+                 primarily for use with non-RAS net devs (heads up! AOL users)
+                 includes device masking support ala Linux/FreeBSD
+            new: unix: ps will now see the client as 'rc5des'. This is
+                 to facilitate scripted or system-wide shutdowns/restarts.
+2.7110.441  new: all: log-to-file options/types/limits
+            imp: all: made --config menus more intuitive
+2.7109.441  fix: win32cli shutdown if not hidden and not service :)
+2.7109.440  fix: win32cli shutdown for win95 if hidden or service
+            fix: all: proxified HTTP works again
+            new: all: Big packet (>8*2^28) support (requires proxy 306 or
+                 newer). Support is enabled only if the 'preferred-
+                 packet-size' is greater than 31.
+                 *Warning*: do not share buffers between clients that have
+                 the use of big packets enabled and clients older than
+                 2.7109.440 since older clients will truncate the packets.
+            new: infrastructure for new/more contests
+            chg: |- includes partial .ini restructuring
+            chg: |- tracking contest open/closed states is no longer necessary
+            chg: |  `- .inis no longer need to be shared with offline clients
+            chg: `- buffer filenames are now generated from base names
+            new: all: fetch/flush from 'remote' buffers
+            new: all: Buffers are now FIFO (sorta)
+            new: all: introduced unique release number scheme
+            new: all: client<->proxy time synchronization added
+            new: all: --import option to merge buffer files
+            chg: all: checkpt interval is now the greater of 10min/10% change
+            chg: all: coalescing flush is no longer supported
+            imp: all: socket buffer size is increased if necessary which
+                 improves network throughput on non-unix platforms
+2.7106.436  fix: win32gui:Percent bar in hidden mode reenabled
+            fix: win32gui:Log Grapher now allows end date to be set
+            fix: win32gui:Window/Logger settings now saved at shutdown
+            fix: win32gui:Log File only reread when required now
+2.7106.436  fix: all: Randomprefix incrementation problem fixed.
+2.7106.435  new: Linux/FreeBSD: Added lurk functionality
+                 Includes device (eth*,ppp*,sl*) masking support
+2.7105.432  fix: OS2: EMX & lurk mode changes.
+            fix: OS2: -(un)install honors -quiet
+2.7105.432  new: win16/32: Connection error message support added for
+2.7105.432  new: all: -1 for nettimeout forces blocking network I/O
+2.7105.432  new: x86: IDT WinChip 2 added to CPU list.
+            new: x86: 4% faster MMX DES core added.
+2.7103.430  chg: all: revert back from old "distributed.net ID" phrasing.
+            new: x86: 50% faster DES MMX core added.
+2.7103.427  new: Win32/Alpha: SMP support added for Alpha/Win32.
+            imp: RISCOS: processor detection and scheduling improved.
+2.7103.425  new: all: Single checkpoint used for all contests.
+2.7102.422  imp: x86: Stripped one instruction in all x86 rc5 cores
+2.7102.422  imp: all: Improved menu and ini file handling of uuehttpmode,
+                 keyproxy, and keyport
+2.7102.422  new: all: scheduledupdatetime, for coordinating project switching
+2.7102.421  imp: MacOS: Many, many changes to merge MT and non-MT clients.
+2.7102.421  imp: FreeBSD, RISC OS x86 fixes.
+2.7102.421  new: all: "Coalescing" flush added, with notable speed increase.
+            new: win32/win16/*nix: -kill/-shutdown, -hup/-restart
+2.7102.421  fix: IRIX: MT fixed.
+            imp: RISC OS: Many x86 coprocessor changes.
+            fix: MacOS: Block count and processor id bug fixed.
+2.7102.421  new: x86: Added a new self-modifying 386/486 core
+2.7102.420  fix: *nix: Fixed -hide/-quiet for unix'sh clients
+2.7102.420  fix: all: Bring back the cputype config screen
+2.7102.420  chg: all: Changed default blocksize to 31.
+2.7102.419  new: *nix: Added -hide/-quiet support for unix'ish clients
+2.7102.419  fix: all: Complete cmdline option cleanup.
+            new: all: creation of portable (encapsulated) console i/o.
+                 Many terminal issues fixed.
+            new: all: the number of threads is now unlimited
+            new: all: "non-threaded" clients are now threaded :)
+                 non-threaded clients use an internal round-robin
+                 mechanism but are obviously not SMP-aware.
+2.7100.418  fix: all: Randomprefix is now changed from buffer
+                 files; offline clients will now generate
+                 from the "correct" randomprefix.
+2.7100.418  fix: FreeBSD, Macos detection changes/fixes
+2.7100.418  new: PowerPC detection added to Mac clients.
+2.7100.418  new: Celeron-A detection added.
+2.7100.418  new: New win16/32 console code implemented for CLI clients.
+                 All previous cli-type clients (hidden,service,cli) in one.
+2.7100.418  fix: Corrected SOCKS4 & 5 support
+2.7100.418  chg: x86 autodetect cleanup
+2.7100.418  fix: win32gui: Verbosity, help file, other general fixes.
+2.7100.418  fix: HTTP connections will always go to port 80 of the
+                 specified *key* proxy
+2.7100.418  chg: Priority scale changed to 0-9. Old OS/2 priority code
+                 removed. Win32gui option checking fixes.
+2.7100.418  chg: Ultrix changes.
+            new: ARM clients now support 3 cores.
+2.7100.418  new: Multi-core support added for all 68k platforms.
+                 2 new 68k cores implemented.
+2.7100.418  new: SIGHUP handling implemented.
+            chg: Beta client timeout implemented.
+            chg: AmigaOS changes.
+2.7100.418  chg: Block size selection changed to support slow CPUs.
+2.7100.418  new: RC5 MMX cores are now in place. 50% speed
+                 improvement on Pentium MMX processors.
+2.7100.418  new: Complete rewrite of logging code
+            new: progress bar shows all threads on one line
+            new: blocks now displayed in 2^28 increments.
+2.7100.418  fix: Problem with client rewriting .ini file while in
+                 nodisk mode fixed.
+2.7100.418  new: Win32 Clients have Dial On Demand support.
+2.7100.418  new: Clients now auto-detect the roundrobin to connect to.
+2.7100.417  new: Hooks for RC5 MMX added, general cleanup/sanity checks
+2.7100.417  new: New ARM/StrongARM RC5 cores.
+2.7100.417  new: All messages are now timestamped
+2.7100.417  chg: Amiga changes
+            new: autofindkeyserver option added.
+2.7100.417  chg: Lurk functions added to enable dialing and hanging up.
+2.7100.416  new: Win95/98 combo-box bug worked around in gui client
+2.7100.416  chg: Windows CLI and NT service client integrated.
+2.7100.416  fix: win32 gui logging fixed
+2.7100.416  chg: des-ii-2 will be ignored in future des contests.
+2.7100.416  chg: Many DYNIX fixes.
+2.7100.416  fix: win32gui: Change to fetch, flush, and update to be verbose
+2.7100.416  fix: OS/2: Got new version of Watcom for OS/2, now able to
+                 compile MMX core and build the new version without a
+                 major speed decrease in both the rc5 and des cores.
+2.7100.416  fix: fixed -runbuffers behaviour.
+2.7100.416  chg: RISC OS Updates.
+            new: -cpuinfo added.
+2.7100.416  fix: patched a possible divide by zero race condition that
+                 could occur when two or more clients attempt to flush
+                 a shared buffer where file locking cannot be enforced
+2.7100.416  fix: win32gui will again only respect "runhidden" if it is
+                 auto-launched on startup (via -guistart)
+2.7100.416  fix: Fixed with .ini name not following .exe's name (again).
+2.7100.416  new: Even FASTER DES MMX cores added to x86 clients!
+2.7100.416  new: win32gui fetch/flush menu options can now occur
+                 without halting client operations.
+2.7100.415  fix: win32gui thread priority of message thread increased
+                 to higher priority.
+2.7100.415  new: Automatic processor count on Solaris & Linux added.
+2.7100.415  fix: Bugs with exitfile handling present in 414 have been fixed.
+2.7100.415  new: Added DES MMX cores to x86 clients - thanks go out to
+                 Remi Guyomarch and Bruce Ford who made this possible.
+2.7100.413  fix: Fixed problems in 413 with .ini name not following .exe name
+            fix: rc5 outbuffer being set incorrectly to buff-out.des
+2.7100.413  fix: More SMTP log mailing overriding offline mode fixes.
+            fix: Secondary intel CPUs now identified correctly.
+2.7100.413  fix: lurk is now more verbose and acts the same way in win32/os2
+2.7100.413  fix: Fixed -runbuffers bug that caused invalid block info
+                 to be printed on screen after buffer exhaustion.
+2.7100.413  fix: Fixed the pause file bug in non-mt clients
+2.7100.413  fix: Fixed the -lurkonly problem when buffers ran out, and not
+                 connected, the HD would just sit and grind in OS/2 and Win32
+2.7100.413  fix: Put -lurk/-lurkonly on the menu for OS/2
+2.7100.413  chg: RISC OS and AmigaOS changes/fixes...
+2.7100.413  fix: Client Version # reporting in -config fixed
+2.7100.413  fix: Extra disk access caused by lurk mode reduced greatly
+2.7100.412  fix: win32gui Put a check on the mailmessage so it won't mail
+                 when offline or lurk
+2.7100.412  fix: CommandLine options are now validated
+2.7100.412  fix: OS/2: Gave text output and exit a priority boost
+2.7100.412  fix: OS/2: Redid the lurk mode to only detect slip/ppp
+2.7100.412  chg: Numerous win16 updates.
+            new: Default AMD 486 core now Pentium core.
+            chg: No longer attempts SMTP connections for mailing
+                 logs if the client is in offline mode.
+2.7100.412  chg: Lots of internal changes to prepare for Win16 client
+2.7100.412  fix: Invalid cpu type value now ignored.
+2.7100.412  chg: Buffer path problem and buffer truncation issue addressed
+2.7100.412  fix: win32GUI autolaunches in minimized state correctly now
+2.7100.412  rel: Sat, 27 Jun 1998 17:09:24 -0500 (CDT)
+                 http://lists.distributed.net/hypermail/announce/0049.html
+
+2.7000
+------
+2.7025.410 98.06.24 New ARM DES cores from Steve Lee
+2.7025.410 98.06.23 Fixed various things in the help pager
+2.7024.409 98.06.14 Finalized lurk modes for OS/2
+2.7024.409 98.06.18 Users can now tell us exactly what we need to add to the
+                     CPU identification code to stop their cpu from being
+                     mis-ident'd.
+2.7024.409 98.06.17 Added a new PPro/PII/6x86/K6 *DES* core
+2.7024.409 98.06.15 New 64-bit UltraSparc DES core - super fast !
+2.7024.409 98.06.15 ARM version of Kwan's latest sboxes - 30% faster
+2.7024.409 98.06.14 Fixed the OS/2 lurk mode so that it updates less
+                     freqently.
+2.7024.409 98.05.13 Fixed CPU identification crash under *nix with
+                     486 SX/DX/DX2.
+2.7024.409 98.06.08 More aesthetic fixes, SparcBSD fixes, fetch/flush
+                     quietmode added to suppress proxy message.
+2.7023.408 98.06.08 General aesthetic fixes.
+2.7023.408 98.06.08 SOCKS5 authentication fixed.
+2.7022.407 98.06.01 -update bug is now cleaned up.
+2.7022.407 98.06.01 Lurk now works in OS/2
+2.7021.405 98.05.29 Improved RISC OS multitasking, as well as RISC OS GUI
+                     support. Improved ARM CPU detection. Many AmigaOS changes.
+v2.7021.405 98.05.23 Resolved a number of signal handling problems from
+                     Cyrus Patel
+v2.7021.405 98.05.23 Mail doesn't clear buffers on mail send failure from
+                     Cyrus Patel
+v2.7021.405 98.05.23 Cleaned up Client::Run from Cyrus Patel
+v2.7021.405 98.05.23 Improved client display, block transfer progress, and
+                     keyrate computation from Cyrus Patel
+v2.7021.405 98.05.23 NetWare changes from Cyrus Patel
+v2.7021.405 98.05.21 New cpu/os codes added OS_OS390=39, CPU_S390=14
+v2.7021.405 98.05.21 OS/2 changes from Oscar Chang
+v2.7021.405 98.05.21 New parisc rc5 core from Katsuomi Hamajima
+v2.7021.405 98.05.21 Added Banner message crediting Matthew Kwan
+v2.7021.405 98.05.21 OS390 changes from Friedemann Baitinger
+v2.7021.405 98.05.21 ARM/riscos changes from Chris Berry
+v2.7021.405 98.05.21 Rebuilt bdeslow.aout.o/bbdeslow.aout.o and updated
+                     des-x86.cpp
+v2.7021.404 98.05.19 Increased temp space allocated for headers in http mode
+v2.7021.404 98.05.17 "-n" setting now forces a minimum of 1 block
+v2.7021.404 98.05.04 ForcedKeyPort changes for euro23.v27.distributed.net /
+                     jp.v27.distributed.net/port 3064
+v2.7021.404 98.05.04 New directory structure, configure script
+v2.7020.403 98.04.28 Fixed starting of NT service from command line
+v2.7020.403 98.04.28 Fixed DOS buffer problems
+v2.7020.403 98.04.28 Fixed bug in -offlinemode, when ini file doesn't know
+                     that DES is over.
+v2.7020.403 98.04.23 Improved x86 chip identification
+v2.7020.403 98.04.23 Faster generic des core
+v2.7020.403 98.04.21 Fixed final buffer flush when using "nodisk" mode.
+v2.7020.403 98.04.21 stricmp references changed to strcmpi in cliconfig.cpp
+v2.7020.403 98.04.21 Change to ansi rc5 core rc5ansi2-rg.cpp (4 macros).
+v2.7020.403 98.04.21 Very minor change to p5 core (not even a cycle, really).
+v2.7020.403 98.04.21 Added "-forcefetch"/"-forceflush".  These deal with
+                     corrupted buffer entries much better.
+v2.7020.403 98.04.21 RISCOS changes
+v2.7020.403 98.04.21 Updated strongARM core (in source -- it was used in last
+                     compile already)
+v2.7019.402 98.04.14 Fixed CPU detection for K6/6x86
+v2.7019.402 98.04.14 Win16 changes
+v2.7019.402 98.04.13 Renamed problem.H to problem.h
+v2.7019.402 98.04.13 Fixed Socks4/Socks5 support
+v2.7019.402 98.04.13 Arm/StrongArm fixes
+v2.7019.402 98.04.13 Added aflags to open call in buffwork/sh_fopen
+v2.7019.402 98.04.03 Added SOCKS5 support (with username/password and no auth)
+v2.7019.402 98.04.02 Fixed SOCKS4 support which wasn't working.
+v2.7019.402 98.04.02 Use only correct port with well-known keyserver RRs.
+v2.7018.401 98.04.02 Client::Run returns 'fuller' return codes
+v2.7018.401 98.04.02 Benchmark / test now do both contests
+v2.7018.401 98.04.02 Renamed rc5.* to problem.*
+v2.7018.401 98.04.02 Removed OS2_PM #defines
+v2.7018.401 98.04.02 Fixed dates in mail messages
+v2.7018.401 98.04.02 SUNOS changes
+v2.7018.401 98.04.02 adjusted the #defines in des-x86.cpp to link
+                     successfully under linux
+v2.7018.401 98.04.02 Fixed sopen() problem in buffwork.cpp which affected
+                     many OSes
+v2.7018.401 98.04.02 New HP-PA RC5 core from Katsuomi Hamajima
+                     <hamajima@ydc.co.jp>
+v2.7018.401 98.04.02 Lurk mode 'sticks' now in win32gui client.
+v2.7017.400 98.03.15 New K6 core
+v2.7017.400 98.03.15 Updated Alpha RC5 core (by Pedro Miguel Teixeira)
+v2.7016.399 98.03.13 Fixed buffer flushing problem
+v2.7015.398 98.03.08 Memory buffers are now allocated only as they're needed.
+v2.7015.398 98.03.07 Added 'contestdone' flags to ini to smooth contest
+                     transitions
+v2.7015.398 98.03.06 Fixed problem with "-2" sized buffers
+v2.7015.398 98.03.06 Changed default exitfilecheck time to 30 seconds
+v2.7015.398 98.03.06 Fixed shared buffer open problem
+v2.7015.398 98.03.06 Fixed bug where mail might be sent, even in offline mode.
+v2.7015.398 98.03.06 Fixed treatment of "empty" checkpoint filenames.
+v2.7015.398 98.03.06 Fixed key speed calculation for 2^31 size DES blocks
+v2.7015.398 98.03.06 Fixed block size reported for 2^31 DES blocks
+v2.7014.397b 98.02.27 New x86 CPP cores which fix the core dump problem
+v2.7014.397b 98.02.23 Netware changes
+v2.7014.397 98.02.17 Minor code cleanup
+v2.7014.397 98.02.12 AIX Changes, OSF changes
+v2.7013.396c 98.02.09 Older slice routines moved to oldslice.zip
+v2.7013.396c 98.02.09 HTTP modes no longer force port keyport=2064.
+v2.7013.396b 98.02.13 Made "-quiet" even quieter
+v2.7013.396b 98.02.13 Fixed fault when missing final parameter of 2-param
+                      option
+v2.7013.396b 98.02.08 Digital Unix patches
+v2.7013.396 98.02.08 AIX / SPARC changes
+v2.7013.396 98.02.08 BDESLOW.S/BDESLW1.S cores from Sven Mikkelsen (AT&T syntax)
+v2.7013.396 98.02.13 Fixed mail bug related to sending empty mail messages
+v2.7012.395 98.02.05 Yet another new bitslice driver.
+v2.7011.394b 98.02.01 "Connecting to..." message in network.cpp
+v2.7011.394 98.02.01 Watcom link order changed
+v2.7011.394 98.02.01 OS2 GUI changes for DES tests
+v2.7011.394 98.02.01 Macro collission problem fixed
+v2.7011.394 98.02.01 Netware changes
+v2.7010.393 98.01.30 New, much faster bitslice driver and s-boxes.
+v2.7010.393 98.01.30 Got RC5 assembly running on AIX/PowerPC client.
+v2.7010.393 98.01.30 Fixed mailing to multiple destinations
+v2.7010.392 98.01.30 NT Service version default startup option changed to
+                     auto-start
+v2.7010.392 98.01.30 Warning message about "-hide" when running win32 client
+                     on NT
+v2.7010.392 98.01.28 BEOS, HP, Netware changes
+v2.7009.391 98.01.25 Added duplicate x86 core to allow 2 DES threads.
+v2.7008.390 98.01.24 New non-x86 DES core routines
+v2.7008.390 98.01.25 Netware changes
+v2.7008.390 98.01.24 -runbuffers/-runoffline ignored when doing
+                     fetch/flush/update
+v2.7007.389 98.01.21 "sent to server"/"received from server" messages include
+                     DES/RC5 type
+v2.7007.389 98.01.20 CPU identification for non-unix X86 from Cyrus Patel
+v2.7006.388 98.01.20 Newer x86 DES core -- 8% faster on PPros
+v2.7005.387 98.01.19 Added 2nd method for proxies to notify clients about
+                     contest status.
+v2.7005.387 98.01.18 DES Bitslice cores from Remi
+v2.7004.386 98.01.17 Client will properly identify a 3*2^28 block now
+v2.7004.386 98.01.17 Fixed negative block sizes
+v2.7004.386 98.01.17 Added ansi core des routine
+v2.7004.386 98.01.17 632 byte memory leak on some failed network Open()s
+v2.7003.385 98.01.15 Don't process a partial block started on another
+                     cpu/os/build
+v2.7002.384 98.01.13 RISCOS changes
+v2.7002.383 98.01.13 Banner problem
+v2.7002.382 98.01.13 Client shows size of block being processed
+v2.7002.382 98.01.13 Win32 clients no longer set processor affinity when
+                     when only 1 cpu is configured.
+v2.7002.382 98.01.13 Fixed RC5 blocks being sent to server with wrong contestid
+                     when they were downloaded by older non-dual clients.
+                     This also caused various other buffer problems, and
+                     faults.
+v2.7002.382 98.01.13 "Block ready" message now identifies what kind of block.
+v2.7001.381 98.01.12 New RC5 cores (cpp wasn't updated before)
+v2.7001.380 98.01.12 Fixed up code to detect end of DES contest (again.  Ugh.)
+v2.7001.379 98.01.12 Fixed speed reporting on individual blocks.
+v2.7001.378 98.01.12 Fixed up code to detect end of DES contest
+v2.7001.376 98.01.12 Problem with block counting fixed
+v2.7001.375 98.01.12 Cosmetic changes to key speed reporting
+v2.7001.369 98.01.11 des key incrementation stuff from Remi, new des-x86.cpp
+v2.7001.368 98.01.10 X86 des core from Remi Guyomarch
+v2.7001.365 98.01.06 Initial Changes to incorporate DESII contest
+
+2.6403
+------
+98.01.06 v2.6403.357 RISCOS changes
+98.01.06 v2.6403.357 QNX Changes
+98.01.06 v2.6403.356 Network http bug in 355 fixed
+98.01.05 v2.6403.355 BEOS changes
+98.01.05 v2.6403.355 K6 core removed (486 core used in this case as it's actually faster)
+98.01.04 v2.6403.350 New p5/k5/486/6x86 cores
+98.01.03 v2.6403.345 Limited checking of exitrc5.now file to once every
+                     3 seconds
+98.01.03 v2.6403.340 Checkpoint files re-written immediately after blocks
+                     finished
+98.01.03 v2.6403.340 keyserver port can now be explictly specified when using
+                     http
+98.01.03 v2.6403.340 PutBufferOutput() no longer returns error if Update()
+                     fails. Only actual buffer updating problems result in a
+                     returned error.
+97.12.31 v2.6403.340 Random prefix changes cause ini file to be rewritten
+                     sooner
+97.12.31 v2.6403.340 Firemodes 2/3 now default to rc5proxy23.distributed.net
+97.12.31 v2.6403.340 Fixed exit problem that occasionally caused blocks to be
+                     lost
+97.12.25 v2.6403.335 Fixed issue that some clients don't read their checkpoint
+                     files
+97.12.19 v2.6403.330 StrongArm/RiscOS changes
+97.12.17 v2.6403.325 PPC/Linux changes for core selection
+97.12.16 v2.6403.320 Fixed date field in mail messages
+97.12.15 v2.6403.310 Fixed "-ini" command line option not working
+97.12.15 v2.6403.305 New Random number generator added (with much longer
+                     periodicity)
+97.12.15 v2.6403.305 Fixed problem with sharing 6401 buffers (lost
+                     email/cpu/ver info)
+97.12.08 v2.6403.290 Fixed problems caused by buffers of size 0
+97.12.08 v2.6403.285 Increased network pause for Solaris clients
+97.12.08 v2.6403.280 Fixed issue with blocks being re-retrieved from
+                     buff-in.rc5
+
+2.6402
+------
+97.12.04 v2.6402.275 Added 5 second pause in MT clients when quitting to allow
+                     child threads to quit.
+97.12.02 v2.6402.270 Client will now 'pause' when a 'pause' file is detected
+                     (configure with "-pausefile filename" on command line,
+                     or pausefile=fn in ini)
+97.12.02 v2.6402.270 Small message on x86 clients when autodetecting CPU
+                     indicating that it's only a guess
+97.12.01 v2.6402.270 Build "fraction" added to logfile/mail logs
+97.12.01 v2.6402.270 "The proxy says" messages not printed when network
+                     errors occur to prevent logfile overflow
+97.12.01 v2.6402.270 Random blocks now use (prior prefix) + 1 to avoid
+                     generating blocks that have been checked
+97.12.01 v2.6402.265 Added Y2K support to print routines
+97.11.29 v2.6402.260 Fixed support for multiple CPU's on non-windows machines
+97.11.26 2.6402 Released
+
+2.6401
+------
+* note that 2.6401 clients were released with various combinations
+  of these changes.
+
+97.11.26 Tightened up -test routines
+97.11.25 Buffer files now retain information on cpu/os/build of client
+         that cracked the block
+97.11.24 K6 Core was slower in 11.10 update.  Rolled back to pre-11/10
+97.11.24 Misc Internal cleanups
+97.11.12 Added numcpu autodetect under Win32
+97.11.12 Added client support for better http proxy communications
+97.11.11 Added "Proxy-Connection: Keep-Alive" to http-proxy headers
+97.11.10 Faster PPC/X86 cores
+97.11.8  Added "-noexitfilecheck" option (noexitfilecheck=1 in ini file)
+97.11.8  Added "-nettimeout" option (nettimeout=xxx in ini file)
+97.11.7  "-1" returned on kill/break
+97.10.31 Added "-until HHMM"
+97.10.31 Increased mt support to 16 processors
+97.10.31 Added 1/10 second pause on error in network get routine
+97.10.31 RAS functions dynamically loaded in Win32 client
+97.10.30 Added -lurk ("lurk=1" in ini) to detect modem connection win32/win95
+         -lurkonly ("lurkonly=1" in ini) to only connect when modem connection
+         is detected
+97.10.29 Combined win32 console and win95 hidden clients into one
+         Added "-hide" option for win95.  INI setting: "win95hidden=1"
+         No longer appears in task list when hidden
+97.10.28 Added support for other items in the INI file.
+         "runoffline=1", "runbuffers=1", "in=filename", "out=filename",
+         "percentoff=1", "frequent=1", "nofallback=1", "quiet=1",
+         "nodisk=1", "cktime=nnn"
+97.10.28 Fixed mail bug.  No mail was sent when logging was off
+97.10.28 Client will now quit when 'exitrc5.now' file is found
+97.10.28 Fixed -runbuffers problem
+97.10.27 Changed default directory for buffers to be same as executable
+97.10.27 Added -quiet option
+97.10.27 Added shutdown mechanism to clients
+97.10.27 Removed 'sleep' in network routines
+97.10.26 Update is forced when user types "U", exit on "X" (win32 os2 dos)
+97.10.25 Amiga/m68k port made
+97.10.25 Fixed "-out" and "-l"
+97.10.22 modified to attack RC5-32/12/8 (64-bit)
+
+2.0051
+------
+97.10.10 x86 Cores multithread-safe
+97.10.10 New K6 core
+97.10.10 Ability to set input/output thresholds independently
+97.10.10 Email id added to logs and mail subject line
+97.10.10 Fixed overlapping % meters at startup with partially done blocks
+97.10.10 niceness 0 is now even lower priority in Win32 version
+97.10.9 Added -nodisk and -forceunlock options
+97.10.9 Fixed http proxy userid/password encoding (hopefully)
+
+2.005
+------------------
+97.10.5 Added support for userid/password http proxy firewalls
+97.10.4 Multithreading extended to unix clients using pthreads
+97.10.1 Added -frequent option to make best use of intermittent connections.
+97.9.29 Checkpointing added (5 minute intervals)
+97.9.25 Windows multithreaded client
+97.9.25 Divide by zero problem fixed (blocks ending in 0000001)
+97.9.23 Corrections to speed calculations throughout
+97.9.19 Whenever network access is required, both a fetch & flush occur,
+        This should synchronize/minimize network connections.
+97.9.18 Added mailing of logs
+97.9.17 "Network::" errors no longer logged to disk
+97.9.17 Added -ini, -in, and -out command line overrides
+97.9.11 'Total completed' information added to logs
+97.9.10 Added command line options for all current INI file settings
+97.9.10 Added command line options -benchmark2, -runoffline, -runbuffers
+
+v2 Build 4 (2.004)
+------------------
+problems with -update resolved
+automatic core selection added to Win32 & OS/2 clients
+problems with automatically fetching new blocks resolved
+
+
+v2 Build 3 (2.003)
+------------------
+new, faster checking cores for more processors
+changes in networking code to allow for more http proxy support
+preferred keyserver can now be specified when doing http
+network timeouts increased
+improved block buffering code
+maximum block count increased
+buffer files explictly placed in exe directory on win32
+
+
+
+v2 Build 2 (2.002)
+------------------
+97.8.05 shadow count variable
+97.8.05 hour timout saves work
+97.8.05 timing output problem
+97.8.05 *break* text in win32
+97.8.05 help message fixed
+97.8.05 fetch and flush counts return
+97.8.05 flush core dump fixed
+97.8.05 fclose in Ini
+
+
+v2 Build 1 (2.001)
+------------------
+97.6.26 OS/CPU additions to cputypes.h
+97.6.26 partial block restart notify (the R)
+97.6.26 break works during -test
+97.6.26 buffer lock timeout fixed
+97.6.26 default email now rc5@distributed.net
+97.6.26 -update option = fetch+flush
+97.6.26 rename files to be 8.3 filename compliant
+97.6.26 zero extra email to help email mangling problem
+97.6.26 strncpy lengths fixed to insure terminated strings
+97.6.26 ini file location specification via RC5INI environment variable
+97.6.26 random keys if client can't connect
+97.6.26 partial block rates are now correct
+97.6.26 time in hh:mm:ss
+97.6.26 rewrote firewall support
+97.6.26 fseeks() for ANSI compliance
+97.6.26 flush checks count before opening connection
+97.6.26 negative run times fixed
+97.6.26 buffer count reporting
+97.6.26 times in benchmark also fixed
+97.6.26 3 nice levels
+97.6.26 logging to file
+97.6.26 error messages more clear
+97.6.26 new autobuff and iniread code - memory leak fixed
+97.6.26 new faster ANSI C and ASM cores
+97.6.26 httpd fixed - checked under CERN and WinProxy
+97.6.26 proxy hunting now works
+
