@@ -64,10 +64,10 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{F81DD4E6-13BB-4F49-9861-4DB80E8A0A18}</revnumber>
+		<revnumber>{28AC1DB1-301C-43E1-AA3A-361EDB16FCE7}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>10/11/2003 20:24</lastsavedtm>
+		<lastsavedtm>11/23/2003 21:32</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -5860,40 +5860,40 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="84808460b5e62b616af978ebb74fd864">changes.txt</td>
+			<td href="media/changes.txt" md5="6487bbfa2267155a15b04d7360d2449b">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>56433</td>
+			<td>56630</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td href="media/dnetc.com" md5="666ae4cc743eff4873f19d05236d594e">dnetc.com</td>
+			<td href="media/dnetc.com" md5="105eb06eda30947c7c899fce121f4958">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
-			<td>6656</td>
+			<td>8192</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="4023d99a1cc851211f0b73363c5ea6b0">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="04557dfbddfe2edee69ad953ef655c1c">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
-			<td>209408</td>
+			<td>222720</td>
 			<td>2.9007.486.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="0955529466bc9e75cc571fc9e805be4b">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="9ff673802dd3ef9a3106a547630d30c3">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
-			<td>30208</td>
+			<td>36864</td>
 			<td>2.9007.486.0</td>
 			<td>1033</td>
 			<td>512</td>
@@ -5920,10 +5920,10 @@ Click "Close" to exit.</td>
 			<td>4</td>
 		</row>
 		<row>
-			<td href="media/readme.w32" md5="8393290c36ec3a566ec9d51a36b18a1a">readme.w32</td>
+			<td href="media/readme.win32.html" md5="00ea916c4f4d328212d9ceac6d9069a2">readme.win32.html</td>
 			<td>ComponentDocs</td>
-			<td>README.W32|readme.w32</td>
-			<td>17993</td>
+			<td>README.HTM|readme.win32.html</td>
+			<td>18382</td>
 			<td/>
 			<td/>
 			<td>512</td>
@@ -6683,7 +6683,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{3B5EA478-68DF-4722-9451-C1044600E997}</td>
+			<td>{7A9B57B6-4BD7-4646-8919-DDA4B71CD495}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -7211,8 +7211,8 @@ Click "Close" to exit.</td>
 			<td>ProgramMenuDctiFolder</td>
 			<td>READW32.LNK|View Win32 readme information.lnk</td>
 			<td>ComponentDocsShortcuts</td>
-			<td>[WindowsFolder]notepad.exe</td>
-			<td>[TARGETDIR]readme.w32</td>
+			<td>[TARGETDIR]readme.win32.html</td>
+			<td/>
 			<td/>
 			<td/>
 			<td/>
