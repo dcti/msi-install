@@ -60,7 +60,7 @@
 		<revnumber>{434F4404-FD41-4729-AA44-AD48AD5287A6}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/18/2003 05:22</lastsavedtm>
+		<lastsavedtm>09/19/2003 01:36</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -72,6 +72,341 @@
 		<col key="yes" def="s72">Action</col>
 		<col def="L0">Description</col>
 		<col def="L0">Template</col>
+		<row>
+			<td>Advertise</td>
+			<td>Advertising application</td>
+			<td/>
+		</row>
+		<row>
+			<td>AllocateRegistrySpace</td>
+			<td>Allocating registry space</td>
+			<td>Free space: [1]</td>
+		</row>
+		<row>
+			<td>AppSearch</td>
+			<td>Searching for installed applications</td>
+			<td>Property: [1], Signature: [2]</td>
+		</row>
+		<row>
+			<td>BindImage</td>
+			<td>Binding executables</td>
+			<td>File: [1]</td>
+		</row>
+		<row>
+			<td>CCPSearch</td>
+			<td>Searching for qualifying products</td>
+			<td/>
+		</row>
+		<row>
+			<td>CostFinalize</td>
+			<td>Computing space requirements</td>
+			<td/>
+		</row>
+		<row>
+			<td>CostInitialize</td>
+			<td>Computing space requirements</td>
+			<td/>
+		</row>
+		<row>
+			<td>CreateFolders</td>
+			<td>Creating folders</td>
+			<td>Folder: [1]</td>
+		</row>
+		<row>
+			<td>CreateShortcuts</td>
+			<td>Creating shortcuts</td>
+			<td>Shortcut: [1]</td>
+		</row>
+		<row>
+			<td>DeleteServices</td>
+			<td>Deleting services</td>
+			<td>Service: [1]</td>
+		</row>
+		<row>
+			<td>DuplicateFiles</td>
+			<td>Creating duplicate files</td>
+			<td>File: [1],  Directory: [9],  Size: [6]</td>
+		</row>
+		<row>
+			<td>FileCost</td>
+			<td>Computing space requirements</td>
+			<td/>
+		</row>
+		<row>
+			<td>GenerateScript</td>
+			<td>Generating script operations for action:</td>
+			<td>[1]</td>
+		</row>
+		<row>
+			<td>InstallAdminPackage</td>
+			<td>Copying network install files</td>
+			<td>File: [1], Directory: [9], Size: [6]</td>
+		</row>
+		<row>
+			<td>InstallFiles</td>
+			<td>Copying new files</td>
+			<td>File: [1],  Directory: [9],  Size: [6]</td>
+		</row>
+		<row>
+			<td>InstallODBC</td>
+			<td>Installing ODBC components</td>
+			<td/>
+		</row>
+		<row>
+			<td>InstallServices</td>
+			<td>Installing new services</td>
+			<td>Service: [2]</td>
+		</row>
+		<row>
+			<td>InstallValidate</td>
+			<td>Validating install</td>
+			<td/>
+		</row>
+		<row>
+			<td>LaunchConditions</td>
+			<td>Evaluating launch conditions</td>
+			<td/>
+		</row>
+		<row>
+			<td>MoveFiles</td>
+			<td>Moving files</td>
+			<td>File: [1],  Directory: [9],  Size: [6]</td>
+		</row>
+		<row>
+			<td>PatchFiles</td>
+			<td>Patching files</td>
+			<td>File: [1],  Directory: [2],  Size: [3]</td>
+		</row>
+		<row>
+			<td>ProcessComponents</td>
+			<td>Updating component registration</td>
+			<td/>
+		</row>
+		<row>
+			<td>PublishComponents</td>
+			<td>Publishing Qualified Components</td>
+			<td>Component ID: [1], Qualifier: [2]</td>
+		</row>
+		<row>
+			<td>PublishFeatures</td>
+			<td>Publishing Product Features</td>
+			<td>Feature: [1]</td>
+		</row>
+		<row>
+			<td>PublishProduct</td>
+			<td>Publishing product information</td>
+			<td/>
+		</row>
+		<row>
+			<td>RMCCPSearch</td>
+			<td>Searching for qualifying products</td>
+			<td/>
+		</row>
+		<row>
+			<td>RUNCA_CONFIG_DNETC</td>
+			<td>Waiting for client configuration to complete before continuing...</td>
+			<td/>
+		</row>
+		<row>
+			<td>RUNCA_INSTALL_DNETC</td>
+			<td>Installing client as service</td>
+			<td/>
+		</row>
+		<row>
+			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
+			<td>Stopping running clients</td>
+			<td/>
+		</row>
+		<row>
+			<td>RUNCA_STOP_DNETC</td>
+			<td>Stopping running clients</td>
+			<td/>
+		</row>
+		<row>
+			<td>RUNCA_UNINST_DNETC</td>
+			<td>Removing client service</td>
+			<td/>
+		</row>
+		<row>
+			<td>RegisterClassInfo</td>
+			<td>Registering Class servers</td>
+			<td>Class Id: [1]</td>
+		</row>
+		<row>
+			<td>RegisterExtensionInfo</td>
+			<td>Registering extension servers</td>
+			<td>Extension: [1]</td>
+		</row>
+		<row>
+			<td>RegisterFonts</td>
+			<td>Registering fonts</td>
+			<td>Font: [1]</td>
+		</row>
+		<row>
+			<td>RegisterMIMEInfo</td>
+			<td>Registering MIME info</td>
+			<td>MIME Content Type: [1], Extension: [2]</td>
+		</row>
+		<row>
+			<td>RegisterProduct</td>
+			<td>Registering product</td>
+			<td>[1]</td>
+		</row>
+		<row>
+			<td>RegisterProgIdInfo</td>
+			<td>Unregistering program identifiers</td>
+			<td>ProgId: [1]</td>
+		</row>
+		<row>
+			<td>RegisterTypeLibraries</td>
+			<td>Registering type libraries</td>
+			<td>LibID: [1]</td>
+		</row>
+		<row>
+			<td>RegisterUser</td>
+			<td>Registering user</td>
+			<td>[1]</td>
+		</row>
+		<row>
+			<td>RemoveDuplicateFiles</td>
+			<td>Removing duplicated files</td>
+			<td>File: [1], Directory: [9]</td>
+		</row>
+		<row>
+			<td>RemoveEnvironmentStrings</td>
+			<td>Updating environment strings</td>
+			<td>Name: [1], Value: [2], Action [3]</td>
+		</row>
+		<row>
+			<td>RemoveFiles</td>
+			<td>Removing files</td>
+			<td>File: [1], Directory: [9]</td>
+		</row>
+		<row>
+			<td>RemoveFolders</td>
+			<td>Removing folders</td>
+			<td>Folder: [1]</td>
+		</row>
+		<row>
+			<td>RemoveIniValues</td>
+			<td>Removing INI files entries</td>
+			<td>File: [1],  Section: [2],  Key: [3], Value: [4]</td>
+		</row>
+		<row>
+			<td>RemoveODBC</td>
+			<td>Removing ODBC components</td>
+			<td/>
+		</row>
+		<row>
+			<td>RemoveRegistryValues</td>
+			<td>Removing system registry values</td>
+			<td>Key: [1], Name: [2]</td>
+		</row>
+		<row>
+			<td>RemoveShortcuts</td>
+			<td>Removing shortcuts</td>
+			<td>Shortcut: [1]</td>
+		</row>
+		<row>
+			<td>Rollback</td>
+			<td>Rolling back action:</td>
+			<td>[1]</td>
+		</row>
+		<row>
+			<td>RollbackCleanup</td>
+			<td>Finalizing installation and waiting for configuration...</td>
+			<td/>
+		</row>
+		<row>
+			<td>SelfRegModules</td>
+			<td>Registering modules</td>
+			<td>File: [1], Folder: [2]</td>
+		</row>
+		<row>
+			<td>SelfUnregModules</td>
+			<td>Unregistering modules</td>
+			<td>File: [1], Folder: [2]</td>
+		</row>
+		<row>
+			<td>SetODBCFolders</td>
+			<td>Initializing ODBC directories</td>
+			<td>ODBC Driver [1] forcing folder [2] to [3]</td>
+		</row>
+		<row>
+			<td>StartServices</td>
+			<td>Starting services</td>
+			<td>Service: [1]</td>
+		</row>
+		<row>
+			<td>StopServices</td>
+			<td>Stopping services</td>
+			<td>Service: [1]</td>
+		</row>
+		<row>
+			<td>UnmoveFiles</td>
+			<td>Removing moved files</td>
+			<td>File: [1], Directory: [9]</td>
+		</row>
+		<row>
+			<td>UnpublishComponents</td>
+			<td>Unpublishing Qualified Components</td>
+			<td>Component ID: [1], Qualifier: [2]</td>
+		</row>
+		<row>
+			<td>UnpublishFeatures</td>
+			<td>Unpublishing Product Features</td>
+			<td>Feature: [1]</td>
+		</row>
+		<row>
+			<td>UnpublishProduct</td>
+			<td>Unpublishing product information</td>
+			<td/>
+		</row>
+		<row>
+			<td>UnregisterClassInfo</td>
+			<td>Unregister Class servers</td>
+			<td>Class Id: [1]</td>
+		</row>
+		<row>
+			<td>UnregisterExtensionInfo</td>
+			<td>Unregistering extension servers</td>
+			<td>Extension: [1]</td>
+		</row>
+		<row>
+			<td>UnregisterFonts</td>
+			<td>Unregistering fonts</td>
+			<td>Font: [1]</td>
+		</row>
+		<row>
+			<td>UnregisterMIMEInfo</td>
+			<td>Unregistering MIME info</td>
+			<td>MIME Content Type: [1], Extension: [2]</td>
+		</row>
+		<row>
+			<td>UnregisterProgIdInfo</td>
+			<td>Unregistering program identifiers</td>
+			<td>ProgId: [1]</td>
+		</row>
+		<row>
+			<td>UnregisterTypeLibraries</td>
+			<td>Unregistering type libraries</td>
+			<td>LibID: [1]</td>
+		</row>
+		<row>
+			<td>WriteEnvironmentStrings</td>
+			<td>Updating environment strings</td>
+			<td>Name: [1], Value: [2], Action [3]</td>
+		</row>
+		<row>
+			<td>WriteIniValues</td>
+			<td>Writing INI files values</td>
+			<td>File: [1],  Section: [2],  Key: [3], Value: [4]</td>
+		</row>
+		<row>
+			<td>WriteRegistryValues</td>
+			<td>Writing system registry values</td>
+			<td>Key: [1], Name: [2], Value: [3]</td>
+		</row>
 	</table>
 
 	<table name="AdminExecuteSequence">
@@ -2872,7 +3207,7 @@ To install in this folder, click "Next". To install to a different folder, enter
 			<td>33</td>
 			<td>65539</td>
 			<td/>
-			<td>{\VSI_MS_Sans_Serif16.0_1_0}Welcome to the [ProductName] Setup Wizard</td>
+			<td>{\VSI_MS_Sans_Serif16.0_1_0}Welcome to the Setup Wizard</td>
 			<td/>
 			<td>|</td>
 		</row>
@@ -3111,6 +3446,20 @@ To install in this folder, click "Next". To install to a different folder, enter
 			<td>3</td>
 			<td/>
 			<td>{\VSI_MS_Sans_Serif13.0_0_0}Please wait...</td>
+			<td/>
+			<td>|</td>
+		</row>
+		<row>
+			<td>ProgressForm</td>
+			<td>ProgressLabel2</td>
+			<td>Text</td>
+			<td>18</td>
+			<td>128</td>
+			<td>336</td>
+			<td>12</td>
+			<td>3</td>
+			<td/>
+			<td>{\VSI_MS_Sans_Serif13.0_0_0}</td>
 			<td/>
 			<td>|</td>
 		</row>
@@ -3534,7 +3883,7 @@ Click "Close" to exit.</td>
 			<td>33</td>
 			<td>65539</td>
 			<td/>
-			<td>{\VSI_MS_Sans_Serif16.0_1_0}Welcome to the [ProductName] Setup Wizard</td>
+			<td>{\VSI_MS_Sans_Serif16.0_1_0}Welcome to the Setup Wizard</td>
 			<td/>
 			<td>|</td>
 		</row>
@@ -4820,9 +5169,9 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>RUNCA_CONFIG_DNETC</td>
-			<td>1890</td>
-			<td>TARGETDIR</td>
-			<td>[TARGETDIR]dnetc.exe -config</td>
+			<td>18</td>
+			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
+			<td>-config</td>
 		</row>
 		<row>
 			<td>RUNCA_DEBUG_MSG</td>
@@ -4832,9 +5181,9 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>RUNCA_INSTALL_DNETC</td>
-			<td>1890</td>
-			<td>TARGETDIR</td>
-			<td>[TARGETDIR]dnetc.exe -install</td>
+			<td>18</td>
+			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
+			<td>-quiet -install</td>
 		</row>
 		<row>
 			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
@@ -4850,15 +5199,15 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>RUNCA_STOP_DNETC</td>
-			<td>1890</td>
+			<td>1122</td>
 			<td>TARGETDIR</td>
-			<td>[TARGETDIR]dnetc.exe -shutdown</td>
+			<td>[TARGETDIR]dnetc.exe -quiet -shutdown</td>
 		</row>
 		<row>
 			<td>RUNCA_UNINST_DNETC</td>
-			<td>1890</td>
+			<td>1122</td>
 			<td>TARGETDIR</td>
-			<td>[TARGETDIR]dnetc.exe -uninstall</td>
+			<td>[TARGETDIR]dnetc.exe -quiet -uninstall</td>
 		</row>
 	</table>
 
@@ -4880,7 +5229,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -4892,7 +5241,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
@@ -4904,7 +5253,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
@@ -4916,7 +5265,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>39</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -4928,7 +5277,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>FinishButton</td>
 			<td>FinishButton</td>
 			<td>CancelButton</td>
@@ -4940,7 +5289,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>5</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td/>
 			<td>CancelButton</td>
@@ -4952,7 +5301,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>FinishButton</td>
 			<td>FinishButton</td>
 			<td>CancelButton</td>
@@ -4964,7 +5313,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
@@ -4976,7 +5325,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -4988,7 +5337,7 @@ Click "Close" to exit.</td>
 			<td>271</td>
 			<td>78</td>
 			<td>3</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NoButton</td>
 			<td>NoButton</td>
 			<td>NoButton</td>
@@ -5000,7 +5349,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -5036,7 +5385,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -5048,7 +5397,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -5060,7 +5409,7 @@ Click "Close" to exit.</td>
 			<td>330</td>
 			<td>101</td>
 			<td>65543</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>ErrorText</td>
 			<td/>
 			<td/>
@@ -5072,7 +5421,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
@@ -5096,7 +5445,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
@@ -5108,7 +5457,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>39</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -5120,7 +5469,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>FinishButton</td>
 			<td>FinishButton</td>
 			<td>CancelButton</td>
@@ -5132,7 +5481,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>5</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td/>
 			<td>CancelButton</td>
@@ -5144,7 +5493,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>FinishButton</td>
 			<td>FinishButton</td>
 			<td>CancelButton</td>
@@ -5168,7 +5517,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
 			<td>CloseButton</td>
@@ -5180,7 +5529,7 @@ Click "Close" to exit.</td>
 			<td>373</td>
 			<td>287</td>
 			<td>7</td>
-			<td>[ProductName]</td>
+			<td>Setup for [ProductName]</td>
 			<td>NextButton</td>
 			<td>NextButton</td>
 			<td>CancelButton</td>
@@ -5432,6 +5781,18 @@ Click "Close" to exit.</td>
 			<td>ProgressBar</td>
 			<td>WriteRegistryValues</td>
 			<td>Progress</td>
+		</row>
+		<row>
+			<td>ProgressForm</td>
+			<td>ProgressLabel</td>
+			<td>ActionText</td>
+			<td>Text</td>
+		</row>
+		<row>
+			<td>ProgressForm</td>
+			<td>ProgressLabel2</td>
+			<td>ActionData</td>
+			<td>Text</td>
 		</row>
 	</table>
 
@@ -5783,12 +6144,12 @@ Click "Close" to exit.</td>
 		<row>
 			<td>RUNCA_CONFIG_DNETC</td>
 			<td>DNETC_RUNCONFIG AND NOT Installed</td>
-			<td>5850</td>
+			<td>6850</td>
 		</row>
 		<row>
 			<td>RUNCA_INSTALL_DNETC</td>
 			<td>(DNETC_STARTMODE="Service") AND (NOT Installed)</td>
-			<td>5801</td>
+			<td>6801</td>
 		</row>
 		<row>
 			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
@@ -6341,7 +6702,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductName</td>
-			<td>dnetc</td>
+			<td>distributed.net client</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
