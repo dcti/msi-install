@@ -1,7 +1,24 @@
 
-- Need to start the client for the first time at the conclusion of installation.
+- Need to start the client for the first time at the conclusion of 
+  installation.
 
-- "Automatically start via my Startup folder" always creates the shortcut in the
-  All Users startup folder instead of the Personal Startup folder.
+- Reinstate "Automatically start via my Startup folder" option for
+  startmode.  The creation of Shortcuts within the per-user Startup 
+  folder was always redirected into the All Users' Startup folder, even 
+  when the full directory was specified.
 
-- Upgrading when a previous MSI existed does not seem to remove the previous install.
+- Upgrading when a previous MSI existed does not seem to remove the
+  previous install?  This seems to work now, at least most of the time.
+
+- Reinstate NEWERPRODUCTFOUND check (in "Upgrade" table) to prevent
+  installation on top when a newer version has already been installed.
+  xml2msi's update flag blindly alters the VersionMax column of all
+  rows, causing problems with this.
+
+- MSI Product version numbers must technically be of the form
+  "a.b.ccc.ddd" where "a" and "b" must be < 255 (even though windows PE
+  executables don't allow all version segments to be 0-65535).  Our
+  client versioning scheme violates this, but there doesn't seem to be
+  any problems caused by us doing this.  Maybe we should just
+  skip "b" and make it 0?
+
