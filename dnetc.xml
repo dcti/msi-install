@@ -60,7 +60,7 @@
 		<revnumber>{434F4404-FD41-4729-AA44-AD48AD5287A6}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/14/2003 23:19</lastsavedtm>
+		<lastsavedtm>09/16/2003 02:05</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -282,8 +282,12 @@
 		<col key="yes" def="s72">Property</col>
 		<col key="yes" def="s72">Signature_</col>
 		<row>
-			<td>DNETC_PARITICIPANT_ID</td>
-			<td>Signature_ini_dnetc_id</td>
+			<td>PersonalScreenSaver</td>
+			<td>Signature_reg_personal_saver</td>
+		</row>
+		<row>
+			<td>PersonalStartupFolder</td>
+			<td>Signature_reg_personal_startup_folder</td>
 		</row>
 		<row>
 			<td>TARGETDIR</td>
@@ -295,12 +299,16 @@
 		<col key="yes" def="s72">Name</col>
 		<col def="v0">Data</col>
 		<row>
-			<td>DefBannerBitmap.bmp</td>
-			<td href="./Binary_DefBannerBitmap.bmp" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
+			<td>BannerBitmap.bmp</td>
+			<td href="./Binary_BannerBitmap.bmp" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
 			<td href="./Binary_NewFldrBtn.bmp" md5="326a40f5ae0f716a3818531e475678bf"/>
+		</row>
+		<row>
+			<td>ReadDnetcId.vbs</td>
+			<td href="./Binary_ReadDnetcId.vbs" md5="217312e00e4eb98f3eba2bc46a966a3e"/>
 		</row>
 		<row>
 			<td>UpFldrBtn.bmp</td>
@@ -343,15 +351,15 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>???</td>
+			<td>_DBA273F25B3C4D289BD1E1377A4BEC37</td>
 		</row>
 		<row>
 			<td>ComponentClientShortcuts</td>
 			<td>{CD30EE5D-8C2B-4149-ABD8-1B615C02FAEE}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>1</td>
-			<td>???</td>
+			<td>Registry008</td>
 		</row>
 		<row>
 			<td>ComponentDocs</td>
@@ -359,47 +367,47 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>???</td>
+			<td>_91B13C3D1A09428C8792D0E112AC8D6F</td>
 		</row>
 		<row>
 			<td>ComponentDocsShortcuts</td>
 			<td>{621CF062-519B-4B40-850B-39CEC7067D13}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>1</td>
-			<td>???</td>
+			<td>Registry007</td>
 		</row>
 		<row>
 			<td>ComponentRunAllUsersStartup</td>
 			<td>{56801C97-87FD-4164-AE05-1E9D3F1DF094}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>DNETC_STARTMODE="AllStartup"</td>
-			<td>???</td>
+			<td>Registry006</td>
 		</row>
 		<row>
 			<td>ComponentRunMyUserSaver</td>
 			<td>{DC4E20A2-92DD-422D-AEE9-3C9DD28035A9}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>DNETC_STARTMODE="MySaver"</td>
-			<td>???</td>
+			<td>Registry002</td>
 		</row>
 		<row>
 			<td>ComponentRunMyUserStartup</td>
 			<td>{C5D9F67E-0474-44A6-ACD9-23A588E97019}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>DNETC_STARTMODE="MyStartup"</td>
-			<td>???</td>
+			<td>Registry005</td>
 		</row>
 		<row>
 			<td>ComponentRunService</td>
 			<td>{971F97C6-D724-4D25-82B5-4992D6236281}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>DNETC_STARTMODE="Service"</td>
-			<td>???</td>
+			<td>Registry004</td>
 		</row>
 		<row>
 			<td>ComponentSaver</td>
@@ -407,15 +415,15 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>???</td>
+			<td>_6F01E41A193D46E489224BA835B927CF</td>
 		</row>
 		<row>
 			<td>RemoveObsolete</td>
 			<td>{B1D64897-5037-4893-8C3E-0B4B389CD406}</td>
 			<td>TARGETDIR</td>
-			<td>0</td>
+			<td>4</td>
 			<td>1</td>
-			<td>???</td>
+			<td>Registry009</td>
 		</row>
 	</table>
 
@@ -3582,9 +3590,9 @@ Click "Close" to exit.</td>
 			<td>WelcomeForm</td>
 			<td>WarningText</td>
 			<td>Text</td>
-			<td>9</td>
-			<td>186</td>
-			<td>354</td>
+			<td>18</td>
+			<td>150</td>
+			<td>336</td>
 			<td>66</td>
 			<td>3</td>
 			<td/>
@@ -3596,13 +3604,13 @@ Click "Close" to exit.</td>
 			<td>WelcomeForm</td>
 			<td>WelcomeText</td>
 			<td>Text</td>
-			<td>9</td>
-			<td>63</td>
-			<td>354</td>
+			<td>18</td>
+			<td>70</td>
+			<td>336</td>
 			<td>114</td>
 			<td>3</td>
 			<td/>
-			<td>{\VSI_MS_Sans_Serif13.0_0_0}The installer will guide you through the steps required to install [ProductName] on your computer.</td>
+			<td>{\VSI_MS_Sans_Serif13.0_0_0}The installer will guide you through the steps required to install [ProductName] on your computer.  This will enable your computer to particpate in any of the exciting distributed computing projects that are running on the distributed.net global network.</td>
 			<td/>
 			<td>|</td>
 		</row>
@@ -4781,6 +4789,18 @@ Click "Close" to exit.</td>
 			<td>[VSDUIANDADVERTISED]</td>
 		</row>
 		<row>
+			<td>RUNCA_INSTALL_DNETC</td>
+			<td>1890</td>
+			<td>TARGETDIR</td>
+			<td>[TARGETDIR]dnetc.exe -install</td>
+		</row>
+		<row>
+			<td>RUNCA_READ_DNETC_ID</td>
+			<td>6</td>
+			<td>ReadDnetcId.vbs</td>
+			<td/>
+		</row>
+		<row>
 			<td>RUNCA_STOPDNETC</td>
 			<td>1890</td>
 			<td>TARGETDIR</td>
@@ -5129,14 +5149,29 @@ Click "Close" to exit.</td>
 			<td>.:USER'S~2|User's Desktop</td>
 		</row>
 		<row>
+			<td>ObsoleteUninstFolder</td>
+			<td>TARGETDIR</td>
+			<td>.:uninst|uninst</td>
+		</row>
+		<row>
+			<td>PersonalStartupFolder</td>
+			<td>StartupFolder</td>
+			<td>.</td>
+		</row>
+		<row>
+			<td>ProgramMenuDctiFolder</td>
+			<td>ProgramMenuFolder</td>
+			<td>.:DISTRI~1|distributed.net</td>
+		</row>
+		<row>
 			<td>ProgramMenuFolder</td>
 			<td>TARGETDIR</td>
 			<td>.:USER'S~1|User's Programs Menu</td>
 		</row>
 		<row>
-			<td>STARTMENU_ALLUSERS_DCTI</td>
-			<td>.</td>
-			<td>.</td>
+			<td>StartupFolder</td>
+			<td>TARGETDIR</td>
+			<td>.:STARTUP|Startup</td>
 		</row>
 		<row>
 			<td>TARGETDIR</td>
@@ -5155,6 +5190,36 @@ Click "Close" to exit.</td>
 		<col key="yes" def="S72">Parent</col>
 		<col key="yes" def="S255">Path</col>
 		<col def="I2">Depth</col>
+		<row>
+			<td>Signature_reg_mru_client</td>
+			<td/>
+			<td>[ProgramFilesFolder]</td>
+			<td>2</td>
+		</row>
+		<row>
+			<td>_DrLocator_oldagentdir</td>
+			<td>_Signature_MPAGENTEXE_1</td>
+			<td/>
+			<td>0</td>
+		</row>
+		<row>
+			<td>_Signature_MPAGENTEXE_1</td>
+			<td/>
+			<td>C:\Program Files</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>_Signature_MPAGENTEXE_1</td>
+			<td/>
+			<td>[ProgramFilesFolder]</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>_Signature_MPAGENTEXE_1</td>
+			<td>_RegLocator_hklm_sw_ud</td>
+			<td/>
+			<td>0</td>
+		</row>
 	</table>
 
 	<table name="DuplicateFile">
@@ -5408,7 +5473,7 @@ Click "Close" to exit.</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
 			<td>27648</td>
-			<td>2.99.473.0</td>
+			<td>2.95.483.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>1</td>
@@ -5502,14 +5567,6 @@ Click "Close" to exit.</td>
 		<col def="s128">Key</col>
 		<col def="I2">Field</col>
 		<col def="I2">Type</col>
-		<row>
-			<td>Signature_ini_dnetc_id</td>
-			<td>[TARGETDIR]dnetc.ini</td>
-			<td>parameters</td>
-			<td>id</td>
-			<td>0</td>
-			<td>2</td>
-		</row>
 	</table>
 
 	<table name="InstallExecuteSequence">
@@ -5670,6 +5727,21 @@ Click "Close" to exit.</td>
 			<td>RMCCPSearch</td>
 			<td>NOT Installed</td>
 			<td>600</td>
+		</row>
+		<row>
+			<td>RUNCA_INSTALL_DNETC</td>
+			<td>(DNETC_STARTMODE="Service") AND (NOT Installed)</td>
+			<td>5801</td>
+		</row>
+		<row>
+			<td>RUNCA_READ_DNETC_ID</td>
+			<td>NOT Installed</td>
+			<td>1105</td>
+		</row>
+		<row>
+			<td>RUNCA_UNINST_DNETC</td>
+			<td>Installed</td>
+			<td>2001</td>
 		</row>
 		<row>
 			<td>RegisterClassInfo</td>
@@ -6080,20 +6152,6 @@ Click "Close" to exit.</td>
 		</row>
 	</table>
 
-	<table name="Patch">
-		<col key="yes" def="s72">File_</col>
-		<col key="yes" def="i2">Sequence</col>
-		<col def="i4">PatchSize</col>
-		<col def="i2">Attributes</col>
-		<col def="V0">Header</col>
-		<col def="S38">StreamRef_</col>
-	</table>
-
-	<table name="PatchPackage">
-		<col key="yes" def="s38">PatchId</col>
-		<col def="i2">Media_</col>
-	</table>
-
 	<table name="ProgId">
 		<col key="yes" def="s255">ProgId</col>
 		<col def="S255">ProgId_Parent</col>
@@ -6152,7 +6210,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ConfirmInstallForm_PrevArgs</td>
-			<td>FolderForm</td>
+			<td>DnetcStartModeForm</td>
 		</row>
 		<row>
 			<td>DNETC_PARTICIPANT_ID</td>
@@ -6207,6 +6265,10 @@ Click "Close" to exit.</td>
 			<td>Distributed Computing Technologies, Inc.</td>
 		</row>
 		<row>
+			<td>PersonalStartupFolder</td>
+			<td>unknown</td>
+		</row>
+		<row>
 			<td>ProductCode</td>
 			<td>{03528BFB-ED30-4629-8440-7F97EC863FE1}</td>
 		</row>
@@ -6220,11 +6282,11 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>1.0.0</td>
+			<td>2.95.483.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
-			<td>DefBannerBitmap.bmp</td>
+			<td>BannerBitmap.bmp</td>
 		</row>
 		<row>
 			<td>SFF_NewFldrBtn</td>
@@ -6330,7 +6392,7 @@ Click "Close" to exit.</td>
 			<td>72</td>
 			<td>348</td>
 			<td>17</td>
-			<td>Automatic start after I log in, via the "Startup" group</td>
+			<td>Automatic start after I log in, via my "Startup" group</td>
 			<td/>
 		</row>
 		<row>
@@ -6392,6 +6454,20 @@ Click "Close" to exit.</td>
 			<td>MRUClient</td>
 			<td>1</td>
 		</row>
+		<row>
+			<td>Signature_reg_personal_saver</td>
+			<td>1</td>
+			<td>Control Panel\Desktop</td>
+			<td>SCRNSAVE.EXE</td>
+			<td>2</td>
+		</row>
+		<row>
+			<td>Signature_reg_personal_startup_folder</td>
+			<td>1</td>
+			<td>Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders</td>
+			<td>Startup</td>
+			<td>2</td>
+		</row>
 	</table>
 
 	<table name="Registry">
@@ -6402,12 +6478,76 @@ Click "Close" to exit.</td>
 		<col def="L0">Value</col>
 		<col def="s72">Component_</col>
 		<row>
-			<td>Local001</td>
+			<td>Registry001</td>
 			<td>2</td>
 			<td>Software\Distributed Computing Technologies, Inc.</td>
 			<td>MRUClient</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td>ComponentClient</td>
+		</row>
+		<row>
+			<td>Registry002</td>
+			<td>1</td>
+			<td>Control Panel\Desktop</td>
+			<td>SCRNSAVE.EXE</td>
+			<td>[WindowsFolder]dnetc.scr</td>
+			<td>ComponentRunMyUserSaver</td>
+		</row>
+		<row>
+			<td>Registry003</td>
+			<td>2</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>ScreenSaver.launch</td>
+			<td>[PersonalScreenSaver]</td>
+			<td>ComponentRunMyUserSaver</td>
+		</row>
+		<row>
+			<td>Registry004</td>
+			<td>2</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>MsiCheck.StartMode</td>
+			<td>Service</td>
+			<td>ComponentRunService</td>
+		</row>
+		<row>
+			<td>Registry005</td>
+			<td>1</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>MsiCheck.StartMode</td>
+			<td>MyStartup</td>
+			<td>ComponentRunMyUserStartup</td>
+		</row>
+		<row>
+			<td>Registry006</td>
+			<td>1</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>MsiCheck.StartMode</td>
+			<td>AllStartup</td>
+			<td>ComponentRunAllUsersStartup</td>
+		</row>
+		<row>
+			<td>Registry007</td>
+			<td>1</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>MsiCheck.DocsShortcuts</td>
+			<td>1</td>
+			<td>ComponentDocsShortcuts</td>
+		</row>
+		<row>
+			<td>Registry008</td>
+			<td>1</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>MsiCheck.ClientShortcuts</td>
+			<td>1</td>
+			<td>ComponentClientShortcuts</td>
+		</row>
+		<row>
+			<td>Registry009</td>
+			<td>1</td>
+			<td>Software\Distributed Computing Technologies, Inc.</td>
+			<td>MsiCheck.RemoveObsolete</td>
+			<td>1</td>
+			<td>RemoveObsolete</td>
 		</row>
 	</table>
 
@@ -6421,77 +6561,77 @@ Click "Close" to exit.</td>
 			<td>local001</td>
 			<td>RemoveObsolete</td>
 			<td>rc5des.scr</td>
-			<td>[WINDIR]</td>
+			<td>WindowsFolder</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local002</td>
 			<td>RemoveObsolete</td>
 			<td>*</td>
-			<td>[TARGETDIR]\uninst</td>
+			<td>ObsoleteUninstFolder</td>
 			<td>1</td>
 		</row>
 		<row>
 			<td>local0020</td>
 			<td>RemoveObsolete</td>
 			<td/>
-			<td>[TARGETDIR]\uninst</td>
+			<td>ObsoleteUninstFolder</td>
 			<td>1</td>
 		</row>
 		<row>
 			<td>local004</td>
 			<td>RemoveObsolete</td>
 			<td>rc564*.*</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local0040</td>
 			<td>RemoveObsolete</td>
 			<td>uninst.isu</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local00400</td>
 			<td>RemoveObsolete</td>
 			<td>guicntrl.exe</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local005</td>
 			<td>RemoveObsolete</td>
 			<td>bovwin*.*</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local006</td>
 			<td>RemoveObsolete</td>
 			<td>rc5des*.*</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local0060</td>
 			<td>RemoveObsolete</td>
 			<td>rc5v2*.*</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local007</td>
 			<td>RemoveObsolete</td>
 			<td>unwise.exe</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local008</td>
 			<td>RemoveObsolete</td>
 			<td>install.log</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
 	</table>
@@ -6597,36 +6737,92 @@ Click "Close" to exit.</td>
 		<col def="S72">WkDir</col>
 		<row>
 			<td>local001</td>
-			<td>TARGETDIR</td>
-			<td>distributed.net client</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>DNETC.LNK|distributed.net client.lnk</td>
 			<td>ComponentClientShortcuts</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
-			<td>distributed.net client</td>
 			<td/>
 			<td/>
-			<td/>
+			<td>_18be6784.exe</td>
+			<td>0</td>
 			<td>1</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
+		</row>
+		<row>
+			<td>local0011</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>DNETC.LNK|Shutdown Client.lnk</td>
+			<td>ComponentClientShortcuts</td>
+			<td>[TARGETDIR]dnetc.exe</td>
+			<td>-shutdown</td>
+			<td/>
+			<td/>
+			<td>_18be6784.exe</td>
+			<td>0</td>
+			<td>1</td>
+			<td>TARGETDIR</td>
+		</row>
+		<row>
+			<td>local0012</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>CONFIG.LNK|Client Configuration.lnk</td>
+			<td>ComponentClientShortcuts</td>
+			<td>[TARGETDIR]dnetc.exe</td>
+			<td>-config</td>
+			<td/>
+			<td/>
+			<td>_18be6784.exe</td>
+			<td>0</td>
+			<td>1</td>
+			<td>TARGETDIR</td>
+		</row>
+		<row>
+			<td>local0013</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>CMDHELP.LNK|Client Command Line Help</td>
+			<td>ComponentClientShortcuts</td>
+			<td>[TARGETDIR]dnetc.exe</td>
+			<td>-help</td>
+			<td/>
+			<td/>
+			<td>_18be6784.exe</td>
+			<td>0</td>
+			<td>1</td>
+			<td>TARGETDIR</td>
 		</row>
 		<row>
 			<td>local002</td>
-			<td>ALLUSERSSTARTUP</td>
-			<td>distributed.net client</td>
+			<td>StartupFolder</td>
+			<td>DNETC.LNK|distributed.net client.lnk</td>
 			<td>ComponentRunAllUsersStartup</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
-			<td>distributed.net client</td>
+			<td>Automatically start the distributed.net distributed computing client</td>
 			<td/>
-			<td/>
-			<td/>
+			<td>_18be6784.exe</td>
+			<td>0</td>
 			<td>7</td>
-			<td>[TARGETDIR]</td>
+			<td>TARGETDIR</td>
+		</row>
+		<row>
+			<td>local0020</td>
+			<td>PersonalStartupFolder</td>
+			<td>DNETC.LNK|distributed.net client</td>
+			<td>ComponentRunMyUserStartup</td>
+			<td>[TARGETDIR]dnetc.exe</td>
+			<td/>
+			<td>Automatically start the distributed.net distributed computing client</td>
+			<td/>
+			<td>_18be6784.exe</td>
+			<td>0</td>
+			<td>7</td>
+			<td>TARGETDIR</td>
 		</row>
 		<row>
 			<td>local003</td>
-			<td>STARTMENU_ALLUSERS_DCTI</td>
-			<td>View readme information</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>README.LNK|View readme information.lnk</td>
 			<td>ComponentDocsShortcuts</td>
 			<td>[TARGETDIR]readme.txt</td>
 			<td/>
@@ -6634,8 +6830,8 @@ Click "Close" to exit.</td>
 			<td/>
 			<td/>
 			<td/>
-			<td/>
-			<td/>
+			<td>1</td>
+			<td>TARGETDIR</td>
 		</row>
 	</table>
 
@@ -6654,7 +6850,7 @@ Click "Close" to exit.</td>
 			<td>dnetc.exe</td>
 			<td/>
 			<td/>
-			<td/>
+			<td>10000</td>
 			<td/>
 			<td/>
 			<td/>
