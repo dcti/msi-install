@@ -64,10 +64,10 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{E2AC47C6-03FA-4F04-9C1A-1CCC9330BCE1}</revnumber>
+		<revnumber>{F81DD4E6-13BB-4F49-9861-4DB80E8A0A18}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>10/01/2003 04:28</lastsavedtm>
+		<lastsavedtm>10/01/2003 04:51</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -642,7 +642,7 @@
 		</row>
 		<row>
 			<td>MsiLib.dll</td>
-			<td href="streams/Binary.MsiLib.dll" md5="eb7cd761cdb45a73272f1d92a2f051e4"/>
+			<td href="streams/Binary.MsiLib.dll" md5="b8135a78a6eb1525a8b7129f8b988956"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
@@ -5920,10 +5920,10 @@ Click "Close" to exit.</td>
 			<td>4</td>
 		</row>
 		<row>
-			<td href="media/readme.w32" md5="2d4bffda79fb0141b49a913c2538e22a">readme.w32</td>
+			<td href="media/readme.w32" md5="8393290c36ec3a566ec9d51a36b18a1a">readme.w32</td>
 			<td>ComponentDocs</td>
 			<td>README.W32|readme.w32</td>
-			<td>17997</td>
+			<td>17993</td>
 			<td/>
 			<td/>
 			<td>512</td>
@@ -6623,7 +6623,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>AdminMaintenanceForm_Action</td>
-			<td>Repair</td>
+			<td>Remove</td>
 		</row>
 		<row>
 			<td>AdminWelcomeForm_NextArgs</td>
@@ -6675,7 +6675,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>MaintenanceForm_Action</td>
-			<td>Repair</td>
+			<td>Remove</td>
 		</row>
 		<row>
 			<td>Manufacturer</td>
@@ -6683,7 +6683,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{D397FE9C-FB28-44F0-8F2A-96B4BF3287AE}</td>
+			<td>{3B5EA478-68DF-4722-9451-C1044600E997}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
