@@ -165,7 +165,7 @@ UINT __stdcall SetDirectoryPersonalStartupFolder(MSIHANDLE hInstall)
 
 
 	HKEY hkey;
-	LONG lResult = RegOpenKeyEx(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", 0, NULL, &hkey);
+	LONG lResult = RegOpenKeyEx(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", 0, KEY_QUERY_VALUE, &hkey);
 	if (lResult == ERROR_SUCCESS) {
 		DWORD dwType;
 		char szBuffer[255];
