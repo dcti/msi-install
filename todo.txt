@@ -1,14 +1,8 @@
 
-- Need to start the client for the first time at the conclusion of 
-  installation.
-
 - Reinstate "Automatically start via my Startup folder" option for
   startmode.  The creation of Shortcuts within the per-user Startup 
   folder was always redirected into the All Users' Startup folder, even 
   when the full directory was specified.
-
-- Upgrading when a previous MSI existed does not seem to remove the
-  previous install?  This seems to work now, at least most of the time.
 
 - Reinstate NEWERPRODUCTFOUND check (in "Upgrade" table) to prevent
   installation on top when a newer version has already been installed.
