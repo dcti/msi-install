@@ -60,7 +60,7 @@
 		<revnumber>{434F4404-FD41-4729-AA44-AD48AD5287A6}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/16/2003 02:05</lastsavedtm>
+		<lastsavedtm>09/17/2003 03:09</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -301,6 +301,10 @@
 		<row>
 			<td>BannerBitmap.bmp</td>
 			<td href="./Binary_BannerBitmap.bmp" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
+		</row>
+		<row>
+			<td>MsiLib.dll</td>
+			<td href="./Binary_MsiLib.dll" md5="a3116017724cd45b32903a6912d4d78f"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
@@ -4561,6 +4565,14 @@ Click "Close" to exit.</td>
 		<row>
 			<td>FolderForm</td>
 			<td>NextButton</td>
+			<td>DoAction</td>
+			<td>RUNCA_READ_DNETC_ID</td>
+			<td>1</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>FolderForm</td>
+			<td>NextButton</td>
 			<td>EndDialog</td>
 			<td>Return</td>
 			<td>FolderForm_NextArgs="" AND OutOfDiskSpace&lt;&gt;1</td>
@@ -4572,7 +4584,7 @@ Click "Close" to exit.</td>
 			<td>NewDialog</td>
 			<td>[FolderForm_NextArgs]</td>
 			<td>FolderForm_NextArgs&lt;&gt;"" AND OutOfDiskSpace&lt;&gt;1</td>
-			<td>3</td>
+			<td>4</td>
 		</row>
 		<row>
 			<td>FolderForm</td>
@@ -4795,13 +4807,19 @@ Click "Close" to exit.</td>
 			<td>[TARGETDIR]dnetc.exe -install</td>
 		</row>
 		<row>
-			<td>RUNCA_READ_DNETC_ID</td>
-			<td>6</td>
-			<td>ReadDnetcId.vbs</td>
-			<td/>
+			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
+			<td>1</td>
+			<td>MsiLib.dll</td>
+			<td>_KillRunningClientWindows@4</td>
 		</row>
 		<row>
-			<td>RUNCA_STOPDNETC</td>
+			<td>RUNCA_READ_DNETC_ID</td>
+			<td>1</td>
+			<td>MsiLib.dll</td>
+			<td>_GetDnetcIniParticipantId@4</td>
+		</row>
+		<row>
+			<td>RUNCA_STOP_DNETC</td>
 			<td>1890</td>
 			<td>TARGETDIR</td>
 			<td>[TARGETDIR]dnetc.exe -shutdown</td>
@@ -5191,32 +5209,26 @@ Click "Close" to exit.</td>
 		<col key="yes" def="S255">Path</col>
 		<col def="I2">Depth</col>
 		<row>
-			<td>Signature_reg_mru_client</td>
-			<td/>
-			<td>[ProgramFilesFolder]</td>
-			<td>2</td>
-		</row>
-		<row>
-			<td>_DrLocator_oldagentdir</td>
-			<td>_Signature_MPAGENTEXE_1</td>
+			<td>DrLocator_dnetc_dir</td>
+			<td>Signature_dnetc_exe_1</td>
 			<td/>
 			<td>0</td>
 		</row>
 		<row>
-			<td>_Signature_MPAGENTEXE_1</td>
+			<td>Signature_dnetc_exe_1</td>
 			<td/>
 			<td>C:\Program Files</td>
 			<td>3</td>
 		</row>
 		<row>
-			<td>_Signature_MPAGENTEXE_1</td>
+			<td>Signature_dnetc_exe_1</td>
 			<td/>
 			<td>[ProgramFilesFolder]</td>
 			<td>3</td>
 		</row>
 		<row>
-			<td>_Signature_MPAGENTEXE_1</td>
-			<td>_RegLocator_hklm_sw_ud</td>
+			<td>Signature_dnetc_exe_1</td>
+			<td>Signature_reg_mru_client</td>
 			<td/>
 			<td>0</td>
 		</row>
@@ -5558,6 +5570,16 @@ Click "Close" to exit.</td>
 		<col def="l255">Value</col>
 		<col def="i2">Action</col>
 		<col def="s72">Component_</col>
+		<row>
+			<td>local00001</td>
+			<td>dnetc.ini</td>
+			<td>TARGETDIR</td>
+			<td>parameters</td>
+			<td>id</td>
+			<td>[DNETC_PARTICIPANT_ID]</td>
+			<td>0</td>
+			<td>ComponentClient</td>
+		</row>
 	</table>
 
 	<table name="IniLocator">
@@ -5734,9 +5756,14 @@ Click "Close" to exit.</td>
 			<td>5801</td>
 		</row>
 		<row>
-			<td>RUNCA_READ_DNETC_ID</td>
-			<td>NOT Installed</td>
-			<td>1105</td>
+			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
+			<td/>
+			<td>1902</td>
+		</row>
+		<row>
+			<td>RUNCA_STOP_DNETC</td>
+			<td/>
+			<td>1901</td>
 		</row>
 		<row>
 			<td>RUNCA_UNINST_DNETC</td>
@@ -6846,7 +6873,7 @@ Click "Close" to exit.</td>
 		<col def="I4">MaxDate</col>
 		<col def="S255">Languages</col>
 		<row>
-			<td>Signature_reg_mru_client</td>
+			<td>Signature_dnetc_exe_1</td>
 			<td>dnetc.exe</td>
 			<td/>
 			<td/>
