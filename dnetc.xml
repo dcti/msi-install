@@ -58,16 +58,16 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>dnetc</title>
-		<subject></subject>
+		<subject>distributed computing client</subject>
 		<author>Distributed Computing Technologies, Inc.</author>
 		<keywords>distributed computing dnetc bovine cow rc5 ogr</keywords>
-		<comments></comments>
+		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{C4A569BD-A3A3-45C4-9C6D-2F181DF68F8C}</revnumber>
+		<revnumber>{6E0CC45A-FA93-47E2-AB05-7C77F4C9A9DA}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/20/2003 23:52</lastsavedtm>
+		<lastsavedtm>09/21/2003 03:40</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -642,7 +642,7 @@
 		</row>
 		<row>
 			<td>MsiLib.dll</td>
-			<td href="streams/Binary.MsiLib.dll" md5="2ac09caa4bec285dfa548d8dfad252a8"/>
+			<td href="streams/Binary.MsiLib.dll" md5="c738f86eeac1a7d40b1d473c4ca8942c"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
@@ -734,14 +734,6 @@
 			<td>4</td>
 			<td>DNETC_STARTMODE="MySaver"</td>
 			<td>Registry002</td>
-		</row>
-		<row>
-			<td>ComponentRunMyUserStartup</td>
-			<td>{C5D9F67E-0474-44A6-ACD9-23A588E97019}</td>
-			<td>TARGETDIR</td>
-			<td>4</td>
-			<td>DNETC_STARTMODE="MyStartup"</td>
-			<td>Registry005</td>
 		</row>
 		<row>
 			<td>ComponentRunService</td>
@@ -5185,12 +5177,6 @@ Click "Close" to exit.</td>
 			<td>_KillRunningClientWindows@4</td>
 		</row>
 		<row>
-			<td>RUNCA_PERSONALSTARTUPFOLDER</td>
-			<td>1</td>
-			<td>MsiLib.dll</td>
-			<td>_SetDirectoryPersonalStartupFolder@4</td>
-		</row>
-		<row>
 			<td>RUNCA_READ_DNETC_ID</td>
 			<td>1</td>
 			<td>MsiLib.dll</td>
@@ -5550,11 +5536,6 @@ Click "Close" to exit.</td>
 			<td>uninst|uninst</td>
 		</row>
 		<row>
-			<td>PersonalStartupFolder</td>
-			<td>StartupFolder</td>
-			<td>.</td>
-		</row>
-		<row>
 			<td>ProgramMenuDctiFolder</td>
 			<td>ProgramMenuFolder</td>
 			<td>DISTRI~1|distributed.net</td>
@@ -5845,10 +5826,6 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>ComponentRunMyUserStartup</td>
-		</row>
-		<row>
-			<td>DefaultFeature</td>
 			<td>ComponentRunService</td>
 		</row>
 		<row>
@@ -5871,7 +5848,7 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="d86ea8eee66ec4782dfce10c86359c9d">changes.txt</td>
+			<td href="media/changes.txt" md5="16eed5768605bd5c19f30fd27bb93624">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
 			<td>41429</td>
@@ -5891,7 +5868,7 @@ Click "Close" to exit.</td>
 			<td>4</td>
 		</row>
 		<row>
-			<td href="media/dnetc.com" md5="9c6d3a41c8cc70443cab9f9938cff855">dnetc.com</td>
+			<td href="media/dnetc.com" md5="1de702235a383751de635ca57dd0edac">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
 			<td>5632</td>
@@ -5901,7 +5878,7 @@ Click "Close" to exit.</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="768c6fe177dbd70eaea168ca7778b63a">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="977b7bffd95dc75d16a8931b5db6100a">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
 			<td>205312</td>
@@ -5911,7 +5888,7 @@ Click "Close" to exit.</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="b28811e6333a10549b72dc074f68d134">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="9058555e1d2a4f29df530bfefc9a39af">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
 			<td>35328</td>
@@ -5921,7 +5898,7 @@ Click "Close" to exit.</td>
 			<td>1</td>
 		</row>
 		<row>
-			<td href="media/dnetc.txt" md5="c67c9a0ed58ab32e1c4ad9481d577b13">dnetc.txt</td>
+			<td href="media/dnetc.txt" md5="2a8826d43bdca83bdcdf1b7ec73b3046">dnetc.txt</td>
 			<td>ComponentDocs</td>
 			<td>DNETC.TXT|dnetc.txt</td>
 			<td>15680</td>
@@ -6154,11 +6131,6 @@ Click "Close" to exit.</td>
 			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
 			<td/>
 			<td>1902</td>
-		</row>
-		<row>
-			<td>RUNCA_PERSONALSTARTUPFOLDER</td>
-			<td>NOT Installed</td>
-			<td>751</td>
 		</row>
 		<row>
 			<td>RUNCA_STOP_DNETC</td>
@@ -6689,7 +6661,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{14CAB7E8-173E-41B9-880D-4C5E81358650}</td>
+			<td>{6DFF102C-86DD-40EF-AED8-2808E3515173}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6826,17 +6798,6 @@ Click "Close" to exit.</td>
 			<td/>
 		</row>
 		<row>
-			<td>DNETC_STARTMODE</td>
-			<td>5</td>
-			<td>MyStartup</td>
-			<td>0</td>
-			<td>72</td>
-			<td>348</td>
-			<td>17</td>
-			<td>Automatic start after I log in, via my "Startup" group</td>
-			<td/>
-		</row>
-		<row>
 			<td>MaintenanceForm_Action</td>
 			<td>1</td>
 			<td>Repair</td>
@@ -6920,14 +6881,6 @@ Click "Close" to exit.</td>
 			<td>MsiCheck.StartMode</td>
 			<td>Service</td>
 			<td>ComponentRunService</td>
-		</row>
-		<row>
-			<td>Registry005</td>
-			<td>1</td>
-			<td>Software\Distributed Computing Technologies, Inc.</td>
-			<td>MsiCheck.StartMode</td>
-			<td>MyStartup</td>
-			<td>ComponentRunMyUserStartup</td>
 		</row>
 		<row>
 			<td>Registry006</td>
@@ -7192,7 +7145,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>local0013</td>
 			<td>ProgramMenuDctiFolder</td>
-			<td>CMDHELP.LNK|Client Command Line Help</td>
+			<td>CMDHELP.LNK|Client Command Line Help.lnk</td>
 			<td>ComponentClientShortcuts</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td>-help</td>
@@ -7206,25 +7159,11 @@ Click "Close" to exit.</td>
 		<row>
 			<td>local002</td>
 			<td>StartupFolder</td>
-			<td>DNETC.LNK|distributed.net client.lnk</td>
+			<td>DNETC.LNK|distributed.net client 1.lnk</td>
 			<td>ComponentRunAllUsersStartup</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
-			<td>Automatically start the distributed.net distributed computing client</td>
-			<td/>
-			<td>_18be6784.exe</td>
-			<td>0</td>
-			<td>7</td>
-			<td>TARGETDIR</td>
-		</row>
-		<row>
-			<td>local0020</td>
-			<td>PersonalStartupFolder</td>
-			<td>DNETC.LNK|distributed.net client</td>
-			<td>ComponentRunMyUserStartup</td>
-			<td>[TARGETDIR]dnetc.exe</td>
-			<td/>
-			<td>Automatically start the distributed.net distributed computing client</td>
+			<td>Automatically start the distributed.net distributed computing client for any user</td>
 			<td/>
 			<td>_18be6784.exe</td>
 			<td>0</td>
@@ -7525,19 +7464,10 @@ Click "Close" to exit.</td>
 		<col def="s72">ActionProperty</col>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
-			<td>1.0.0</td>
-			<td>2.8012.465.0</td>
-			<td/>
-			<td>258</td>
-			<td/>
-			<td>NEWERPRODUCTFOUND</td>
-		</row>
-		<row>
-			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
 			<td>2.8012.465.0</td>
 			<td/>
-			<td>256</td>
+			<td>260</td>
 			<td/>
 			<td>PREVIOUSVERSIONSINSTALLED</td>
 		</row>
