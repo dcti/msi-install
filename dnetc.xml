@@ -60,7 +60,7 @@
 		<revnumber>{434F4404-FD41-4729-AA44-AD48AD5287A6}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/17/2003 03:09</lastsavedtm>
+		<lastsavedtm>09/18/2003 05:22</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -282,11 +282,11 @@
 		<col key="yes" def="s72">Property</col>
 		<col key="yes" def="s72">Signature_</col>
 		<row>
-			<td>PersonalScreenSaver</td>
+			<td>PERSONAL_SCREEN_SAVER</td>
 			<td>Signature_reg_personal_saver</td>
 		</row>
 		<row>
-			<td>PersonalStartupFolder</td>
+			<td>PERSONAL_STARTUP_FOLDER</td>
 			<td>Signature_reg_personal_startup_folder</td>
 		</row>
 		<row>
@@ -327,6 +327,10 @@
 	<table name="CheckBox">
 		<col key="yes" def="s72">Property</col>
 		<col def="S64">Value</col>
+		<row>
+			<td>DNETC_RUNCONFIG</td>
+			<td>1</td>
+		</row>
 	</table>
 
 	<table name="ComboBox">
@@ -2234,11 +2238,25 @@ Click "Next" to start the installation.</td>
 		</row>
 		<row>
 			<td>ErrorDialog</td>
-			<td>ErrorText</td>
-			<td>Text</td>
+			<td>ErrorIcon</td>
+			<td>Icon</td>
 			<td>6</td>
 			<td>9</td>
-			<td>318</td>
+			<td>32</td>
+			<td>32</td>
+			<td>5242881</td>
+			<td/>
+			<td/>
+			<td/>
+			<td/>
+		</row>
+		<row>
+			<td>ErrorDialog</td>
+			<td>ErrorText</td>
+			<td>Text</td>
+			<td>40</td>
+			<td>9</td>
+			<td>280</td>
 			<td>48</td>
 			<td>1</td>
 			<td/>
@@ -4801,6 +4819,18 @@ Click "Close" to exit.</td>
 			<td>[VSDUIANDADVERTISED]</td>
 		</row>
 		<row>
+			<td>RUNCA_CONFIG_DNETC</td>
+			<td>1890</td>
+			<td>TARGETDIR</td>
+			<td>[TARGETDIR]dnetc.exe -config</td>
+		</row>
+		<row>
+			<td>RUNCA_DEBUG_MSG</td>
+			<td>19</td>
+			<td/>
+			<td>DNETC_RUNCONFIG=[DNETC_RUNCONFIG]</td>
+		</row>
+		<row>
 			<td>RUNCA_INSTALL_DNETC</td>
 			<td>1890</td>
 			<td>TARGETDIR</td>
@@ -5169,17 +5199,17 @@ Click "Close" to exit.</td>
 		<row>
 			<td>ObsoleteUninstFolder</td>
 			<td>TARGETDIR</td>
-			<td>.:uninst|uninst</td>
+			<td>uninst|uninst</td>
 		</row>
 		<row>
-			<td>PersonalStartupFolder</td>
+			<td>PERSONAL_STARTUP_FOLDER</td>
 			<td>StartupFolder</td>
 			<td>.</td>
 		</row>
 		<row>
 			<td>ProgramMenuDctiFolder</td>
 			<td>ProgramMenuFolder</td>
-			<td>.:DISTRI~1|distributed.net</td>
+			<td>DISTRI~1|distributed.net</td>
 		</row>
 		<row>
 			<td>ProgramMenuFolder</td>
@@ -5751,6 +5781,11 @@ Click "Close" to exit.</td>
 			<td>600</td>
 		</row>
 		<row>
+			<td>RUNCA_CONFIG_DNETC</td>
+			<td>DNETC_RUNCONFIG AND NOT Installed</td>
+			<td>5850</td>
+		</row>
+		<row>
 			<td>RUNCA_INSTALL_DNETC</td>
 			<td>(DNETC_STARTMODE="Service") AND (NOT Installed)</td>
 			<td>5801</td>
@@ -6032,6 +6067,11 @@ Click "Close" to exit.</td>
 			<td>600</td>
 		</row>
 		<row>
+			<td>RUNCA_DEBUG_MSG</td>
+			<td>0</td>
+			<td>401</td>
+		</row>
+		<row>
 			<td>ResumeForm</td>
 			<td>Installed="" AND RESUME</td>
 			<td>998</td>
@@ -6244,10 +6284,6 @@ Click "Close" to exit.</td>
 			<td>rc5@distributed.net</td>
 		</row>
 		<row>
-			<td>DNETC_RUNCONFIG</td>
-			<td>0</td>
-		</row>
-		<row>
 			<td>DNETC_STARTMODE</td>
 			<td>AllStartup</td>
 		</row>
@@ -6292,8 +6328,8 @@ Click "Close" to exit.</td>
 			<td>Distributed Computing Technologies, Inc.</td>
 		</row>
 		<row>
-			<td>PersonalStartupFolder</td>
-			<td>unknown</td>
+			<td>PERSONAL_STARTUP_FOLDER</td>
+			<td>.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
@@ -6525,7 +6561,7 @@ Click "Close" to exit.</td>
 			<td>2</td>
 			<td>Software\Distributed Computing Technologies, Inc.</td>
 			<td>ScreenSaver.launch</td>
-			<td>[PersonalScreenSaver]</td>
+			<td>[PERSONAL_SCREEN_SAVER]</td>
 			<td>ComponentRunMyUserSaver</td>
 		</row>
 		<row>
@@ -6834,7 +6870,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>local0020</td>
-			<td>PersonalStartupFolder</td>
+			<td>PERSONAL_STARTUP_FOLDER</td>
 			<td>DNETC.LNK|distributed.net client</td>
 			<td>ComponentRunMyUserStartup</td>
 			<td>[TARGETDIR]dnetc.exe</td>
