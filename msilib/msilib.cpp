@@ -141,7 +141,7 @@ UINT __stdcall GetDnetcIniParticipantId(MSIHANDLE hInstall)
 // -----------------------------------------------------------------------
 
 #if 0
-void SelectAsDefault(char *scr)
+void SelectAsDefaultSaver(const char *scr)
 {
     char sscr[MAX_PATH];
     GetShortPathName(scr, sscr, MAX_PATH);
@@ -151,6 +151,33 @@ void SelectAsDefault(char *scr)
 	// knows we've changed
 }
 #endif
+
+// -----------------------------------------------------------------------
+
+extern "C" __declspec( dllexport )
+UINT __stdcall SetDirectoryPersonalStartupFolder(MSIHANDLE hInstall)
+{
+	std::string curid = MyGetProperty(hInstall, "Installed");
+	if (!curid.empty()) {
+		// Don't alter the target path if this is being run during uninstall.
+		return ERROR_SUCCESS;
+	}
+
+
+	HKEY hkey;
+	LONG lResult = RegOpenKeyEx(HKEY_CURRENT_USER, "Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders", 0, NULL, &hkey);
+	if (lResult == ERROR_SUCCESS) {
+		DWORD dwType;
+		char szBuffer[255];
+		DWORD dwSize = sizeof(szBuffer);
+		if (RegQueryValueEx(hkey, "Startup", 0, &dwType, (LPBYTE) szBuffer, &dwSize) == ERROR_SUCCESS && dwType == REG_SZ) {
+			MsiSetTargetPath(hInstall, "PersonalStartupFolder", szBuffer);
+		}
+		RegCloseKey(hkey);
+	}
+
+	return ERROR_SUCCESS;
+}
 
 // -----------------------------------------------------------------------
 
