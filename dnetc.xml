@@ -60,7 +60,7 @@
 		<revnumber>{434F4404-FD41-4729-AA44-AD48AD5287A6}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/14/2003 19:43</lastsavedtm>
+		<lastsavedtm>09/14/2003 23:19</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -286,7 +286,7 @@
 			<td>Signature_ini_dnetc_id</td>
 		</row>
 		<row>
-			<td>INSTALLDIR</td>
+			<td>TARGETDIR</td>
 			<td>Signature_reg_mru_client</td>
 		</row>
 	</table>
@@ -295,16 +295,16 @@
 		<col key="yes" def="s72">Name</col>
 		<col def="v0">Data</col>
 		<row>
-			<td>DefBannerBitmap</td>
-			<td href="./Binary_DefBannerBitmap" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
+			<td>DefBannerBitmap.bmp</td>
+			<td href="./Binary_DefBannerBitmap.bmp" md5="7d1ceeec5743cecdad26afc29cfe103d"/>
 		</row>
 		<row>
-			<td>NewFldrBtn</td>
-			<td href="./Binary_NewFldrBtn" md5="326a40f5ae0f716a3818531e475678bf"/>
+			<td>NewFldrBtn.bmp</td>
+			<td href="./Binary_NewFldrBtn.bmp" md5="326a40f5ae0f716a3818531e475678bf"/>
 		</row>
 		<row>
-			<td>UpFldrBtn</td>
-			<td href="./Binary_UpFldrBtn" md5="4638b2aa55fbd0fa73bb08181895cbe7"/>
+			<td>UpFldrBtn.bmp</td>
+			<td href="./Binary_UpFldrBtn.bmp" md5="4638b2aa55fbd0fa73bb08181895cbe7"/>
 		</row>
 	</table>
 
@@ -343,7 +343,15 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>_A5AC63DD4E774855982836DF6D167D30</td>
+			<td>???</td>
+		</row>
+		<row>
+			<td>ComponentClientShortcuts</td>
+			<td>{CD30EE5D-8C2B-4149-ABD8-1B615C02FAEE}</td>
+			<td>TARGETDIR</td>
+			<td>0</td>
+			<td>1</td>
+			<td>???</td>
 		</row>
 		<row>
 			<td>ComponentDocs</td>
@@ -351,14 +359,22 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>_91B13C3D1A09428C8792D0E112AC8D6F</td>
+			<td>???</td>
+		</row>
+		<row>
+			<td>ComponentDocsShortcuts</td>
+			<td>{621CF062-519B-4B40-850B-39CEC7067D13}</td>
+			<td>TARGETDIR</td>
+			<td>0</td>
+			<td>1</td>
+			<td>???</td>
 		</row>
 		<row>
 			<td>ComponentRunAllUsersStartup</td>
 			<td>{56801C97-87FD-4164-AE05-1E9D3F1DF094}</td>
 			<td>TARGETDIR</td>
 			<td>0</td>
-			<td>[DNETC_RUNMODE] = "AllStartup"</td>
+			<td>DNETC_STARTMODE="AllStartup"</td>
 			<td>???</td>
 		</row>
 		<row>
@@ -366,7 +382,7 @@
 			<td>{DC4E20A2-92DD-422D-AEE9-3C9DD28035A9}</td>
 			<td>TARGETDIR</td>
 			<td>0</td>
-			<td>[DNETC_RUNMODE] = "MySaver"</td>
+			<td>DNETC_STARTMODE="MySaver"</td>
 			<td>???</td>
 		</row>
 		<row>
@@ -374,7 +390,7 @@
 			<td>{C5D9F67E-0474-44A6-ACD9-23A588E97019}</td>
 			<td>TARGETDIR</td>
 			<td>0</td>
-			<td>[DNETC_RUNMODE] = "MyStartup"</td>
+			<td>DNETC_STARTMODE="MyStartup"</td>
 			<td>???</td>
 		</row>
 		<row>
@@ -382,8 +398,8 @@
 			<td>{971F97C6-D724-4D25-82B5-4992D6236281}</td>
 			<td>TARGETDIR</td>
 			<td>0</td>
-			<td>[DNETC_RUNMODE] = "Service"</td>
-			<td>????</td>
+			<td>DNETC_STARTMODE="Service"</td>
+			<td>???</td>
 		</row>
 		<row>
 			<td>ComponentSaver</td>
@@ -391,7 +407,7 @@
 			<td>TARGETDIR</td>
 			<td>0</td>
 			<td>1</td>
-			<td>_ACD7B637487440F89E05B515C1118EF8</td>
+			<td>???</td>
 		</row>
 		<row>
 			<td>RemoveObsolete</td>
@@ -432,7 +448,7 @@
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -546,7 +562,7 @@ Click "Next" to start the installation.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>CloseButton</td>
 			<td>|</td>
 		</row>
@@ -676,7 +692,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>CloseButton</td>
 			<td>|</td>
 		</row>
@@ -806,7 +822,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -976,7 +992,7 @@ To create an image in this folder, click "Next". To use a different folder, ente
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>FinishButton</td>
 			<td>|</td>
 		</row>
@@ -1102,7 +1118,7 @@ To create an image in this folder, click "Next". To use a different folder, ente
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -1270,7 +1286,7 @@ To create an image in this folder, click "Next". To use a different folder, ente
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>FinishButton</td>
 			<td>|</td>
 		</row>
@@ -1384,7 +1400,7 @@ Click "Finish" to continue.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>CloseButton</td>
 			<td>|</td>
 		</row>
@@ -1512,7 +1528,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -1680,7 +1696,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -1892,7 +1908,7 @@ Click "Next" to start the installation.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -2060,7 +2076,7 @@ Click "Next" to start the installation.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -2298,7 +2314,7 @@ Click "Next" to start the installation.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>CloseButton</td>
 			<td>|</td>
 		</row>
@@ -2512,7 +2528,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>CloseButton</td>
 			<td>|</td>
 		</row>
@@ -2656,7 +2672,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -2812,7 +2828,7 @@ To install in this folder, click "Next". To install to a different folder, enter
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>FinishButton</td>
 			<td>|</td>
 		</row>
@@ -2938,7 +2954,7 @@ To install in this folder, click "Next". To install to a different folder, enter
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -3106,7 +3122,7 @@ To install in this folder, click "Next". To install to a different folder, enter
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>FinishButton</td>
 			<td>|</td>
 		</row>
@@ -3346,7 +3362,7 @@ Click "Finish" to continue.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>CloseButton</td>
 			<td>|</td>
 		</row>
@@ -3474,7 +3490,7 @@ Click "Close" to exit.</td>
 			<td>52</td>
 			<td>1</td>
 			<td/>
-			<td>DefBannerBitmap</td>
+			<td>[SFF_DefBannerBitmap]</td>
 			<td>NextButton</td>
 			<td>|</td>
 		</row>
@@ -3800,6 +3816,30 @@ Click "Close" to exit.</td>
 			<td>RequiredBodyText</td>
 			<td>Show</td>
 			<td>OutOfDiskSpace=1</td>
+		</row>
+		<row>
+			<td>DnetcEmailForm</td>
+			<td>PreviousButton</td>
+			<td>Disable</td>
+			<td>DnetcEmailForm_PrevArgs=""</td>
+		</row>
+		<row>
+			<td>DnetcEmailForm</td>
+			<td>PreviousButton</td>
+			<td>Enable</td>
+			<td>DnetcEmailForm_PrevArgs&lt;&gt;""</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm</td>
+			<td>PreviousButton</td>
+			<td>Disable</td>
+			<td>DnetcStartModeForm_PrevArgs=""</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm</td>
+			<td>PreviousButton</td>
+			<td>Enable</td>
+			<td>DnetcStartModeForm_PrevArgs&lt;&gt;""</td>
 		</row>
 		<row>
 			<td>FatalErrorForm</td>
@@ -4319,6 +4359,70 @@ Click "Close" to exit.</td>
 			<td>0</td>
 		</row>
 		<row>
+			<td>DnetcEmailForm</td>
+			<td>CancelButton</td>
+			<td>SpawnDialog</td>
+			<td>Cancel</td>
+			<td/>
+			<td>0</td>
+		</row>
+		<row>
+			<td>DnetcEmailForm</td>
+			<td>NextButton</td>
+			<td>EndDialog</td>
+			<td>Return</td>
+			<td>DnetcEmailForm_NextArgs=""</td>
+			<td>2</td>
+		</row>
+		<row>
+			<td>DnetcEmailForm</td>
+			<td>NextButton</td>
+			<td>NewDialog</td>
+			<td>[DnetcEmailForm_NextArgs]</td>
+			<td>DnetcEmailForm_NextArgs&lt;&gt;""</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>DnetcEmailForm</td>
+			<td>PreviousButton</td>
+			<td>NewDialog</td>
+			<td>[DnetcEmailForm_PrevArgs]</td>
+			<td>DnetcEmailForm_PrevArgs&lt;&gt;""</td>
+			<td>0</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm</td>
+			<td>CancelButton</td>
+			<td>SpawnDialog</td>
+			<td>Cancel</td>
+			<td/>
+			<td>0</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm</td>
+			<td>NextButton</td>
+			<td>EndDialog</td>
+			<td>Return</td>
+			<td>DnetcStartModeForm_NextArgs=""</td>
+			<td>2</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm</td>
+			<td>NextButton</td>
+			<td>NewDialog</td>
+			<td>[DnetcStartModeForm_NextArgs]</td>
+			<td>DnetcStartModeForm_NextArgs&lt;&gt;""</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm</td>
+			<td>PreviousButton</td>
+			<td>NewDialog</td>
+			<td>[DnetcStartModeForm_PrevArgs]</td>
+			<td>DnetcStartModeForm_PrevArgs&lt;&gt;""</td>
+			<td>0</td>
+		</row>
+		<row>
 			<td>ErrorDialog</td>
 			<td>A</td>
 			<td>EndDialog</td>
@@ -4679,14 +4783,14 @@ Click "Close" to exit.</td>
 		<row>
 			<td>RUNCA_STOPDNETC</td>
 			<td>1890</td>
-			<td>[INSTALLDIR]</td>
-			<td>[TargetDir]dnetc.exe -shutdown</td>
+			<td>TARGETDIR</td>
+			<td>[TARGETDIR]dnetc.exe -shutdown</td>
 		</row>
 		<row>
 			<td>RUNCA_UNINST_DNETC</td>
 			<td>1890</td>
-			<td>[INSTALLDIR]</td>
-			<td>[INSTALLDIR]dnetc.exe -uninstall</td>
+			<td>TARGETDIR</td>
+			<td>[TARGETDIR]dnetc.exe -uninstall</td>
 		</row>
 	</table>
 
@@ -5030,6 +5134,11 @@ Click "Close" to exit.</td>
 			<td>.:USER'S~1|User's Programs Menu</td>
 		</row>
 		<row>
+			<td>STARTMENU_ALLUSERS_DCTI</td>
+			<td>.</td>
+			<td>.</td>
+		</row>
+		<row>
 			<td>TARGETDIR</td>
 			<td/>
 			<td>SourceDir</td>
@@ -5059,7 +5168,7 @@ Click "Close" to exit.</td>
 			<td>ComponentSaver</td>
 			<td>_6F01E41A193D46E489224BA835B927CF</td>
 			<td>dnetc.scr</td>
-			<td>[WINDIR]</td>
+			<td>WindowsFolder</td>
 		</row>
 	</table>
 
@@ -5245,31 +5354,43 @@ Click "Close" to exit.</td>
 		<col key="yes" def="s72">Component_</col>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__6F01E41A193D46E489224BA835B927CF</td>
+			<td>ComponentClient</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__91B13C3D1A09428C8792D0E112AC8D6F</td>
+			<td>ComponentClientShortcuts</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__A5AC63DD4E774855982836DF6D167D30</td>
+			<td>ComponentDocs</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__ACD7B637487440F89E05B515C1118EF8</td>
+			<td>ComponentDocsShortcuts</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__B3769BA573F04AD78977146DDE08A10E</td>
+			<td>ComponentRunAllUsersStartup</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__DBA273F25B3C4D289BD1E1377A4BEC37</td>
+			<td>ComponentRunMyUserSaver</td>
 		</row>
 		<row>
 			<td>DefaultFeature</td>
-			<td>C__E3662F3A371649DF8704221BCCA0566E</td>
+			<td>ComponentRunMyUserStartup</td>
+		</row>
+		<row>
+			<td>DefaultFeature</td>
+			<td>ComponentRunService</td>
+		</row>
+		<row>
+			<td>DefaultFeature</td>
+			<td>ComponentSaver</td>
+		</row>
+		<row>
+			<td>DefaultFeature</td>
+			<td>RemoveObsolete</td>
 		</row>
 	</table>
 
@@ -5383,7 +5504,7 @@ Click "Close" to exit.</td>
 		<col def="I2">Type</col>
 		<row>
 			<td>Signature_ini_dnetc_id</td>
-			<td>[INSTALLDIR]dnetc.ini</td>
+			<td>[TARGETDIR]dnetc.ini</td>
 			<td>parameters</td>
 			<td>id</td>
 			<td>0</td>
@@ -5836,6 +5957,10 @@ Click "Close" to exit.</td>
 	<table name="LaunchCondition">
 		<col key="yes" def="s255">Condition</col>
 		<col def="l255">Description</col>
+		<row>
+			<td>Version9X OR Privileged</td>
+			<td>This installer may only be run if you have administrative privileges on this computer.</td>
+		</row>
 	</table>
 
 	<table name="ListBox">
@@ -5982,6 +6107,10 @@ Click "Close" to exit.</td>
 		<col key="yes" def="s72">Property</col>
 		<col def="l0">Value</col>
 		<row>
+			<td>ALLUSERS</td>
+			<td>1</td>
+		</row>
+		<row>
 			<td>ARPCONTACT</td>
 			<td>Distributed Computing Technologies, Inc.</td>
 		</row>
@@ -6042,12 +6171,28 @@ Click "Close" to exit.</td>
 			<td>VsdDefaultUIFont.524F4245_5254_5341_4C45_534153783400</td>
 		</row>
 		<row>
+			<td>DnetcEmailForm_NextArgs</td>
+			<td>DnetcStartModeForm</td>
+		</row>
+		<row>
+			<td>DnetcEmailForm_PrevArgs</td>
+			<td>FolderForm</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm_NextArgs</td>
+			<td>ConfirmInstallForm</td>
+		</row>
+		<row>
+			<td>DnetcStartModeForm_PrevArgs</td>
+			<td>DnetcEmailForm</td>
+		</row>
+		<row>
 			<td>ErrorDialog</td>
 			<td>ErrorDialog</td>
 		</row>
 		<row>
 			<td>FolderForm_NextArgs</td>
-			<td>ConfirmInstallForm</td>
+			<td>DnetcEmailForm</td>
 		</row>
 		<row>
 			<td>FolderForm_PrevArgs</td>
@@ -6078,12 +6223,16 @@ Click "Close" to exit.</td>
 			<td>1.0.0</td>
 		</row>
 		<row>
+			<td>SFF_DefBannerBitmap</td>
+			<td>DefBannerBitmap.bmp</td>
+		</row>
+		<row>
 			<td>SFF_NewFldrBtn</td>
-			<td>NewFldrBtn</td>
+			<td>NewFldrBtn.bmp</td>
 		</row>
 		<row>
 			<td>SFF_UpFldrBtn</td>
-			<td>UpFldrBtn</td>
+			<td>UpFldrBtn.bmp</td>
 		</row>
 		<row>
 			<td>SecureCustomProperties</td>
@@ -6170,7 +6319,7 @@ Click "Close" to exit.</td>
 			<td>18</td>
 			<td>348</td>
 			<td>17</td>
-			<td>Start automatically for all users after log in, via the "Startup" group</td>
+			<td>Automatic start after any user logs in, via the "Startup" group</td>
 			<td/>
 		</row>
 		<row>
@@ -6181,7 +6330,7 @@ Click "Close" to exit.</td>
 			<td>72</td>
 			<td>348</td>
 			<td>17</td>
-			<td>Start automatically after I log in, via the "Startup" group</td>
+			<td>Automatic start after I log in, via the "Startup" group</td>
 			<td/>
 		</row>
 		<row>
@@ -6192,7 +6341,7 @@ Click "Close" to exit.</td>
 			<td>36</td>
 			<td>348</td>
 			<td>17</td>
-			<td>Start automatically as a hidden Windows service at boot </td>
+			<td>Automatic start as a hidden Windows service at boot </td>
 			<td/>
 		</row>
 		<row>
@@ -6257,7 +6406,7 @@ Click "Close" to exit.</td>
 			<td>2</td>
 			<td>Software\Distributed Computing Technologies, Inc.</td>
 			<td>MRUClient</td>
-			<td>[INSTALLDIR]dnetc.exe</td>
+			<td>[TARGETDIR]dnetc.exe</td>
 			<td>ComponentClient</td>
 		</row>
 	</table>
@@ -6279,56 +6428,70 @@ Click "Close" to exit.</td>
 			<td>local002</td>
 			<td>RemoveObsolete</td>
 			<td>*</td>
-			<td>[INSTALLDIR]\uninst</td>
+			<td>[TARGETDIR]\uninst</td>
 			<td>1</td>
 		</row>
 		<row>
 			<td>local0020</td>
 			<td>RemoveObsolete</td>
 			<td/>
-			<td>[INSTALLDIR]\uninst</td>
+			<td>[TARGETDIR]\uninst</td>
 			<td>1</td>
 		</row>
 		<row>
 			<td>local004</td>
 			<td>RemoveObsolete</td>
 			<td>rc564*.*</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local0040</td>
 			<td>RemoveObsolete</td>
 			<td>uninst.isu</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local00400</td>
 			<td>RemoveObsolete</td>
 			<td>guicntrl.exe</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local005</td>
 			<td>RemoveObsolete</td>
 			<td>bovwin*.*</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local006</td>
 			<td>RemoveObsolete</td>
 			<td>rc5des*.*</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
 			<td>3</td>
 		</row>
 		<row>
 			<td>local0060</td>
 			<td>RemoveObsolete</td>
 			<td>rc5v2*.*</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local007</td>
+			<td>RemoveObsolete</td>
+			<td>unwise.exe</td>
+			<td>[TARGETDIR]</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local008</td>
+			<td>RemoveObsolete</td>
+			<td>install.log</td>
+			<td>[TARGETDIR]</td>
 			<td>3</td>
 		</row>
 	</table>
@@ -6434,31 +6597,45 @@ Click "Close" to exit.</td>
 		<col def="S72">WkDir</col>
 		<row>
 			<td>local001</td>
-			<td>INSTALLDIR</td>
+			<td>TARGETDIR</td>
 			<td>distributed.net client</td>
-			<td>ComponentClient</td>
-			<td>[INSTALLDIR]dnetc.exe</td>
+			<td>ComponentClientShortcuts</td>
+			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
 			<td>distributed.net client</td>
 			<td/>
 			<td/>
 			<td/>
 			<td>1</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
 		</row>
 		<row>
 			<td>local002</td>
 			<td>ALLUSERSSTARTUP</td>
 			<td>distributed.net client</td>
 			<td>ComponentRunAllUsersStartup</td>
-			<td>[INSTALLDIR]dnetc.exe</td>
+			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
 			<td>distributed.net client</td>
 			<td/>
 			<td/>
 			<td/>
 			<td>7</td>
-			<td>[INSTALLDIR]</td>
+			<td>[TARGETDIR]</td>
+		</row>
+		<row>
+			<td>local003</td>
+			<td>STARTMENU_ALLUSERS_DCTI</td>
+			<td>View readme information</td>
+			<td>ComponentDocsShortcuts</td>
+			<td>[TARGETDIR]readme.txt</td>
+			<td/>
+			<td/>
+			<td/>
+			<td/>
+			<td/>
+			<td/>
+			<td/>
 		</row>
 	</table>
 
