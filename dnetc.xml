@@ -64,10 +64,10 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{6E0CC45A-FA93-47E2-AB05-7C77F4C9A9DA}</revnumber>
+		<revnumber>{E2AC47C6-03FA-4F04-9C1A-1CCC9330BCE1}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>09/21/2003 03:40</lastsavedtm>
+		<lastsavedtm>10/01/2003 04:28</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -642,7 +642,7 @@
 		</row>
 		<row>
 			<td>MsiLib.dll</td>
-			<td href="streams/Binary.MsiLib.dll" md5="c738f86eeac1a7d40b1d473c4ca8942c"/>
+			<td href="streams/Binary.MsiLib.dll" md5="eb7cd761cdb45a73272f1d92a2f051e4"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
@@ -5183,16 +5183,28 @@ Click "Close" to exit.</td>
 			<td>_GetDnetcIniParticipantId@4</td>
 		</row>
 		<row>
+			<td>RUNCA_START_DNETC_GUI</td>
+			<td>210</td>
+			<td>dnetc.exe</td>
+			<td/>
+		</row>
+		<row>
+			<td>RUNCA_START_DNETC_SVC</td>
+			<td>18</td>
+			<td>dnetc.exe</td>
+			<td>-quiet -svcstart</td>
+		</row>
+		<row>
 			<td>RUNCA_STOP_DNETC</td>
-			<td>1122</td>
-			<td>TARGETDIR</td>
-			<td>[TARGETDIR]dnetc.exe -quiet -shutdown</td>
+			<td>1</td>
+			<td>MsiLib.dll</td>
+			<td>_ExecuteDnetcShutdown@4</td>
 		</row>
 		<row>
 			<td>RUNCA_UNINST_DNETC</td>
-			<td>1122</td>
-			<td>TARGETDIR</td>
-			<td>[TARGETDIR]dnetc.exe -quiet -uninstall</td>
+			<td>1</td>
+			<td>MsiLib.dll</td>
+			<td>_ExecuteDnetcUninstall@4</td>
 		</row>
 	</table>
 
@@ -5848,70 +5860,70 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="16eed5768605bd5c19f30fd27bb93624">changes.txt</td>
+			<td href="media/changes.txt" md5="84808460b5e62b616af978ebb74fd864">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>41429</td>
+			<td>56433</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td href="media/dnetc.chm" md5="bb5fd37c3527f4b63c6df3313abf1942">dnetc.chm</td>
-			<td>ComponentDocs</td>
-			<td>DNETC.CHM|dnetc.chm</td>
-			<td>42676</td>
-			<td/>
-			<td/>
-			<td>512</td>
-			<td>4</td>
-		</row>
-		<row>
-			<td href="media/dnetc.com" md5="1de702235a383751de635ca57dd0edac">dnetc.com</td>
+			<td href="media/dnetc.com" md5="666ae4cc743eff4873f19d05236d594e">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
-			<td>5632</td>
+			<td>6656</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="977b7bffd95dc75d16a8931b5db6100a">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="4023d99a1cc851211f0b73363c5ea6b0">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
-			<td>205312</td>
-			<td>2.8012.465.0</td>
+			<td>209408</td>
+			<td>2.9007.486.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="9058555e1d2a4f29df530bfefc9a39af">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="0955529466bc9e75cc571fc9e805be4b">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
-			<td>35328</td>
-			<td>2.95.483.0</td>
+			<td>30208</td>
+			<td>2.9007.486.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>1</td>
 		</row>
 		<row>
-			<td href="media/dnetc.txt" md5="2a8826d43bdca83bdcdf1b7ec73b3046">dnetc.txt</td>
+			<td href="media/dnetc.txt" md5="a2659771a2bc9fcaf45d29848428c56e">dnetc.txt</td>
 			<td>ComponentDocs</td>
 			<td>DNETC.TXT|dnetc.txt</td>
-			<td>15680</td>
+			<td>15716</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>5</td>
 		</row>
 		<row>
-			<td href="media/readme.txt" md5="f32ccdb350f286da05919d28bbc39ef5">readme.txt</td>
+			<td href="media/readme.1st" md5="515d0f69f43a3186d8efcaed09732d90">readme.1st</td>
 			<td>ComponentDocs</td>
-			<td>README.TXT|readme.txt</td>
-			<td>15950</td>
+			<td>README.1ST|readme.1st</td>
+			<td>1927</td>
+			<td/>
+			<td/>
+			<td>512</td>
+			<td>4</td>
+		</row>
+		<row>
+			<td href="media/readme.w32" md5="2d4bffda79fb0141b49a913c2538e22a">readme.w32</td>
+			<td>ComponentDocs</td>
+			<td>README.W32|readme.w32</td>
+			<td>17997</td>
 			<td/>
 			<td/>
 			<td>512</td>
@@ -6130,12 +6142,22 @@ Click "Close" to exit.</td>
 		<row>
 			<td>RUNCA_KILLRUNNINGCLIENTWINDOWS</td>
 			<td/>
-			<td>1902</td>
+			<td>1302</td>
+		</row>
+		<row>
+			<td>RUNCA_START_DNETC_GUI</td>
+			<td>(DNETC_STARTMODE&lt;&gt;"Service") AND (NOT Installed)</td>
+			<td>6878</td>
+		</row>
+		<row>
+			<td>RUNCA_START_DNETC_SVC</td>
+			<td>(DNETC_STARTMODE="Service") AND (NOT Installed)</td>
+			<td>6877</td>
 		</row>
 		<row>
 			<td>RUNCA_STOP_DNETC</td>
 			<td/>
-			<td>1901</td>
+			<td>1301</td>
 		</row>
 		<row>
 			<td>RUNCA_UNINST_DNETC</td>
@@ -6466,7 +6488,7 @@ Click "Close" to exit.</td>
 		<col def="S72">Source</col>
 		<row>
 			<td>1</td>
-			<td>7</td>
+			<td>100</td>
 			<td/>
 			<td>#_FAF4E86245E179AB7B2FFEC3AB420CFF</td>
 			<td/>
@@ -6661,7 +6683,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{6DFF102C-86DD-40EF-AED8-2808E3515173}</td>
+			<td>{D397FE9C-FB28-44F0-8F2A-96B4BF3287AE}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6673,7 +6695,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>2.8012.465.0</td>
+			<td>2.9007.486.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
@@ -6734,23 +6756,23 @@ Click "Close" to exit.</td>
 		<row>
 			<td>AdminMaintenanceForm_Action</td>
 			<td>1</td>
-			<td>Repair</td>
+			<td>Remove</td>
 			<td>0</td>
 			<td>0</td>
 			<td>348</td>
 			<td>17</td>
-			<td>{\VSI_MS_Sans_Serif13.0_0_0}&amp;Repair [ProductName]</td>
+			<td>{\VSI_MS_Sans_Serif13.0_0_0}Re&amp;move [ProductName]</td>
 			<td/>
 		</row>
 		<row>
 			<td>AdminMaintenanceForm_Action</td>
 			<td>2</td>
-			<td>Remove</td>
+			<td>Repair</td>
 			<td>0</td>
 			<td>18</td>
 			<td>348</td>
 			<td>17</td>
-			<td>{\VSI_MS_Sans_Serif13.0_0_0}Re&amp;move [ProductName]</td>
+			<td>{\VSI_MS_Sans_Serif13.0_0_0}&amp;Repair [ProductName]</td>
 			<td/>
 		</row>
 		<row>
@@ -6800,23 +6822,23 @@ Click "Close" to exit.</td>
 		<row>
 			<td>MaintenanceForm_Action</td>
 			<td>1</td>
-			<td>Repair</td>
+			<td>Remove</td>
 			<td>0</td>
 			<td>0</td>
 			<td>348</td>
 			<td>17</td>
-			<td>{\VSI_MS_Sans_Serif13.0_0_0}&amp;Repair [ProductName]</td>
+			<td>{\VSI_MS_Sans_Serif13.0_0_0}Re&amp;move [ProductName]</td>
 			<td/>
 		</row>
 		<row>
 			<td>MaintenanceForm_Action</td>
 			<td>2</td>
-			<td>Remove</td>
+			<td>Repair</td>
 			<td>0</td>
 			<td>18</td>
 			<td>348</td>
 			<td>17</td>
-			<td>{\VSI_MS_Sans_Serif13.0_0_0}Re&amp;move [ProductName]</td>
+			<td>{\VSI_MS_Sans_Serif13.0_0_0}&amp;Repair [ProductName]</td>
 			<td/>
 		</row>
 	</table>
@@ -7107,7 +7129,7 @@ Click "Close" to exit.</td>
 			<td>ComponentClientShortcuts</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
-			<td/>
+			<td>Manually start the distributed.net distributed computing client</td>
 			<td/>
 			<td>_18be6784.exe</td>
 			<td>0</td>
@@ -7159,7 +7181,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>local002</td>
 			<td>StartupFolder</td>
-			<td>DNETC.LNK|distributed.net client 1.lnk</td>
+			<td>DNETC.LNK|distributed.net client.lnk</td>
 			<td>ComponentRunAllUsersStartup</td>
 			<td>[TARGETDIR]dnetc.exe</td>
 			<td/>
@@ -7173,10 +7195,38 @@ Click "Close" to exit.</td>
 		<row>
 			<td>local003</td>
 			<td>ProgramMenuDctiFolder</td>
-			<td>README.LNK|View readme information.lnk</td>
+			<td>README.LNK|View general readme information.lnk</td>
 			<td>ComponentDocsShortcuts</td>
-			<td>[TARGETDIR]readme.txt</td>
+			<td>[WindowsFolder]notepad.exe</td>
+			<td>[TARGETDIR]dnetc.txt</td>
 			<td/>
+			<td/>
+			<td/>
+			<td/>
+			<td>1</td>
+			<td>TARGETDIR</td>
+		</row>
+		<row>
+			<td>local0031</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>READW32.LNK|View Win32 readme information.lnk</td>
+			<td>ComponentDocsShortcuts</td>
+			<td>[WindowsFolder]notepad.exe</td>
+			<td>[TARGETDIR]readme.w32</td>
+			<td/>
+			<td/>
+			<td/>
+			<td/>
+			<td>1</td>
+			<td>TARGETDIR</td>
+		</row>
+		<row>
+			<td>local0032</td>
+			<td>ProgramMenuDctiFolder</td>
+			<td>READ1ST.LNK|View compatibility information.lnk</td>
+			<td>ComponentDocsShortcuts</td>
+			<td>[WindowsFolder]notepad.exe</td>
+			<td>[TARGETDIR]readme.1st</td>
 			<td/>
 			<td/>
 			<td/>
@@ -7465,7 +7515,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
-			<td>2.8012.465.0</td>
+			<td>2.9007.486.0</td>
 			<td/>
 			<td>260</td>
 			<td/>
