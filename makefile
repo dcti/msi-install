@@ -14,7 +14,7 @@ MSI2XML_EXE = bin\msi2xml.exe
 
 DNETCMSI_XML = dnetc.xml
 MSILIB_DLL = streams\Binary.MsiLib.dll
-
+DNETC_EXE = media\dnetc.exe
 DNETCMSI_DATABASE = output\dnetc.msi
 
 # --------
@@ -31,8 +31,8 @@ $(MSILIB_DLL):	msilib\msilib.cpp
 # Compiles the binary MSI database from the intermediate XML representation.
 # This XML representation is not intended to be an editable format; only
 # something that is textual and can be easily version controlled.
-$(DNETCMSI_DATABASE):		$(DNETCMSI_XML) $(MSILIB_DLL)
-	$(XML2MSI_EXE) --ignore-md5 --package-code --product-code --product-version=$(DNETC_EXE) --upgrade-version --update-xml -o $@ $(DNETCMSI_XML)
+$(DNETCMSI_DATABASE):		$(DNETCMSI_XML) $(MSILIB_DLL) $(DNETC_EXE)
+	$(XML2MSI_EXE) --ignore-md5 --package-code --product-code --product-version=$(DNETC_EXE) --upgrade-version --update-xml --output=$@ $(DNETCMSI_XML)
 
 
 # --------
