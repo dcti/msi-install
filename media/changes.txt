@@ -21,11 +21,35 @@ Version bump guide:
   `------------- Denotes a client rewrite.
 
 ==========================================================================
-Version change log: $Id: CHANGES.txt,v 1.14.2.40 2003/11/04 16:36:52 kakace Exp $
+Version change log: $Id: CHANGES.txt,v 1.14.2.60 2004/04/20 09:30:56 oliver Exp $
 ==========================================================================
 
 2.9000
 ------
+2.9008-490  new: all: Enable OGR-24 and OGR-25 Phase 2 (finalization)
+            new: amigaos: native OS4 port
+
+2.9007-489  new: x86: new rc5-72 cores (#3265, #3398)
+            fix: ppc: now detects 745/755 (G3) cpu under linux
+            chg: x86: core preselection (#3477, #3580, #3602, #3621, #3625)
+            imp: x86: cpu identification (#3593, #3627)
+            chg: x86-linux: new build style using uClibc
+
+2.9007-488  fix: macosx: Undefined symbol issue (10.1.5, #3578)
+            imp: all: Force partial work to be restarted when fetched from a
+                      shared buffer by a different user.
+            imp: macosx: somewhat fix the "Pause if running" option (#3566)
+            new: morphos: MorphOS pre-release
+            fix: all: Trashed OGR buffers (bug introduced in 2.9007-487)
+            fix: all: Fixed checkpoint file problem introduced by the user
+                      check.
+
+2.9007-487  fix: amigaos: 68k: fixed a race condition adding public port
+            fix: amigaos: fixed a race quitting the cruncher thread
+            new: MorphOS port
+            new: morphos: added resethandler, client will quit before reset
+            fix: amigaos: fixed timer.device exit crash
+            fix: all: fixed a busy loop that could occur with OGR (#2726)
 
 2.9007-486  imp: nextstep: include assembler cores on x86
             imp: nextstep: fix console handling for config menu
