@@ -154,6 +154,9 @@ void SelectAsDefaultSaver(const char *scr)
 
 // -----------------------------------------------------------------------
 
+#if 0
+// This method must be scheduled after the CostInitialize, FileCost, 
+// and CostFinalize actions have run.
 extern "C" __declspec( dllexport )
 UINT __stdcall SetDirectoryPersonalStartupFolder(MSIHANDLE hInstall)
 {
@@ -178,6 +181,7 @@ UINT __stdcall SetDirectoryPersonalStartupFolder(MSIHANDLE hInstall)
 
 	return ERROR_SUCCESS;
 }
+#endif
 
 // -----------------------------------------------------------------------
 
