@@ -140,6 +140,52 @@ UINT __stdcall GetDnetcIniParticipantId(MSIHANDLE hInstall)
 
 // -----------------------------------------------------------------------
 
+extern "C" __declspec( dllexport )
+UINT __stdcall ExecuteDnetcShutdown(MSIHANDLE hInstall)
+{
+	std::string targetdir = MyGetProperty(hInstall, "TARGETDIR");
+	if (!targetdir.empty()) {
+		targetdir.append("\\dnetc.exe -quiet -shutdown");
+		STARTUPINFO si;
+		PROCESS_INFORMATION pi;
+		memset(&si, 0, sizeof(si));
+		si.cb = sizeof(si);
+		if (CreateProcess(NULL, const_cast<char*>(targetdir.c_str()), NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
+			WaitForSingleObject(pi.hProcess, INFINITE);
+			CloseHandle(pi.hProcess);
+			CloseHandle(pi.hProcess);
+		}
+	}
+
+    return ERROR_SUCCESS;
+}
+
+// -----------------------------------------------------------------------
+
+extern "C" __declspec( dllexport )
+UINT __stdcall ExecuteDnetcUninstall(MSIHANDLE hInstall)
+{
+	std::string targetdir = MyGetProperty(hInstall, "TARGETDIR");
+	if (!targetdir.empty()) {
+		targetdir.append("\\dnetc.exe -quiet -uninstall");
+		STARTUPINFO si;
+		PROCESS_INFORMATION pi;
+		memset(&si, 0, sizeof(si));
+		si.cb = sizeof(si);
+		if (CreateProcess(NULL, const_cast<char*>(targetdir.c_str()), NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)) {
+			WaitForSingleObject(pi.hProcess, INFINITE);
+			CloseHandle(pi.hProcess);
+			CloseHandle(pi.hProcess);
+		}
+	}
+
+    return ERROR_SUCCESS;
+}
+
+// -----------------------------------------------------------------------
+
+
+
 #if 0
 void SelectAsDefaultSaver(const char *scr)
 {
