@@ -64,10 +64,10 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{28AC1DB1-301C-43E1-AA3A-361EDB16FCE7}</revnumber>
+		<revnumber>{190F62EA-F7E7-4E43-81FE-8353F2F660A4}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>11/23/2003 21:32</lastsavedtm>
+		<lastsavedtm>06/06/2004 17:37</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -5543,6 +5543,11 @@ Click "Close" to exit.</td>
 			<td>.:USER'S~2|User's Desktop</td>
 		</row>
 		<row>
+			<td>DocsFolder</td>
+			<td>TARGETDIR</td>
+			<td>docs|docs</td>
+		</row>
+		<row>
 			<td>ObsoleteUninstFolder</td>
 			<td>TARGETDIR</td>
 			<td>uninst|uninst</td>
@@ -5860,17 +5865,17 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="6487bbfa2267155a15b04d7360d2449b">changes.txt</td>
+			<td href="media/changes.txt" md5="80dba17eb069823b67919ea597e0567a">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>56630</td>
+			<td>57949</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td href="media/dnetc.com" md5="105eb06eda30947c7c899fce121f4958">dnetc.com</td>
+			<td href="media/dnetc.com" md5="6ea758bfaf7de7b2ccec24db54690d3d">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
 			<td>8192</td>
@@ -5880,21 +5885,21 @@ Click "Close" to exit.</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="04557dfbddfe2edee69ad953ef655c1c">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="1c4cf29513280fe78ce1b0d70b577846">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
-			<td>222720</td>
-			<td>2.9007.486.0</td>
+			<td>230912</td>
+			<td>2.9008.490.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="9ff673802dd3ef9a3106a547630d30c3">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="3fb5aa4278056b0f17989c28e2713447">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
 			<td>36864</td>
-			<td>2.9007.486.0</td>
+			<td>2.9008.490.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>1</td>
@@ -6683,7 +6688,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{7A9B57B6-4BD7-4646-8919-DDA4B71CD495}</td>
+			<td>{124BB37F-B8BC-4B94-A521-0A6029A75CF6}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6695,7 +6700,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>2.9007.486.0</td>
+			<td>2.9008.490.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
@@ -7021,6 +7026,48 @@ Click "Close" to exit.</td>
 			<td>TARGETDIR</td>
 			<td>3</td>
 		</row>
+		<row>
+			<td>local0081</td>
+			<td>RemoveObsolete</td>
+			<td>uninst*.exe</td>
+			<td>TARGETDIR</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local009</td>
+			<td>RemoveObsolete</td>
+			<td>changes.txt</td>
+			<td>DocsFolder</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local0090</td>
+			<td>RemoveObsolete</td>
+			<td>dnetc.chm</td>
+			<td>DocsFolder</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local0091</td>
+			<td>RemoveObsolete</td>
+			<td>dnetc.txt</td>
+			<td>DocsFolder</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local0092</td>
+			<td>RemoveObsolete</td>
+			<td>readme.txt</td>
+			<td>DocsFolder</td>
+			<td>3</td>
+		</row>
+		<row>
+			<td>local00920</td>
+			<td>RemoveObsolete</td>
+			<td/>
+			<td>DocsFolder</td>
+			<td>3</td>
+		</row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -7079,6 +7126,13 @@ Click "Close" to exit.</td>
 			<td>hlkm_uninst_2</td>
 			<td>2</td>
 			<td>Software\Microsoft\Windows\CurrentVersion\Uninstall\DistributedComputingClient</td>
+			<td>-</td>
+			<td>RemoveObsolete</td>
+		</row>
+		<row>
+			<td>hlkm_uninst_3</td>
+			<td>2</td>
+			<td>Software\Microsoft\Windows\CurrentVersion\Uninstall\distributed.net client</td>
 			<td>-</td>
 			<td>RemoveObsolete</td>
 		</row>
@@ -7515,7 +7569,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
-			<td>2.9007.486.0</td>
+			<td>2.9008.490.0</td>
 			<td/>
 			<td>260</td>
 			<td/>
