@@ -1,0 +1,7 @@
+
+- Need to start the client for the first time at the conclusion of installation.
+
+- "Automatically start via my Startup folder" always creates the shortcut in the
+  All Users startup folder instead of the Personal Startup folder.
+
+- Upgrading when a previous MSI existed does not seem to remove the previous install.
