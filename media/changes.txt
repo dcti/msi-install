@@ -20,20 +20,36 @@ Version bump guide:
   |              proxies will be a accompanied by 'client contest' change.
   `------------- Denotes a client rewrite.
 
+Note: #xxxx refers to bug numbers as viewable on http://bugs.distributed.net/
+
 ==========================================================================
-Version change log: $Id: CHANGES.txt,v 1.14.2.94 2005/05/15 23:31:03 jlawson Exp $
+Version change log: $Id: CHANGES.txt,v 1.14.2.108 2005/11/18 19:34:25 snikkel Exp $
 ==========================================================================
 
 2.9000
 ------
+2.9012-497  new: x86: Added new MMX assembly OGR core, selected for MMX CPUs
+            fix: ogr: some platforms reported incorrect node counts if restarted
+
+2.9011-496  new: x86: Added new assembly OGR core and selected as default
+            fix: x86: Correct RC5 core count speed factor for mmx (#3770)
+            fix: x86: Properly detect National Geode (#3852)
+            new: x86-64: Added new KBE-64 core and selected as default for K8/P4
+            chg: x86: pre-selection for AMD K6 (#3863)
+            chg: x86: pre-selection for Pentium M (#3870)
+            chg: x86: OGR pre-selection for C3 (#3885)
+            new: x86: detect Athlon 64 X2 (#3889)
+
 2.9010-495  fix: x86: Fixed cores dg3, sgp3 and snjl.
-            new: all: Added a stress-test for RC5-72 cores
+            new: all: Added a stress-test ("-stress") for RC5-72 cores
             imp: macosx: Revised temperature monitoring for G5
             new: x86: Added new cores ma4 (#3415) and mmx (#3770)
             imp: x86: Speed improvements for dg3 (#3601) and go2 (#3265) cores
             fix: win32: Prevent possible console mode recursion loop (#3846)
             imp: ppc: Now recognize PPC 7448
             fix: win32: Eliminate random crash on NT service shutdown (#3159)
+            new: all: Display detected CPU clockspeed on "-cpuinfo"
+            imp: ppc: Select vector cores as defaults whenever possible.
 
 2.9009-494  chg: all: Major clean up in the OGR core base
             imp: ppc: Modified KOGE cores - should be faster in most cases

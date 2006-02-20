@@ -8,8 +8,9 @@
 -->
 <!DOCTYPE msi [
    <!ELEMENT msi   (summary,table*)>
-   <!ATTLIST msi version    CDATA #REQUIRED>
-   <!ATTLIST msi xmlns:dt   CDATA #IMPLIED
+   <!ATTLIST msi version    CDATA #REQUIRED
+                 xmlns:dt   CDATA #IMPLIED
+                 msm        (yes|no) "no"
                  codepage   CDATA #IMPLIED
                  compression (MSZIP|LZX|none) "LZX">
    
@@ -64,10 +65,10 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{277AFDDA-E7D2-4057-AFF5-D8E9C3F19AA4}</revnumber>
+		<revnumber>{1636BA56-164A-4D79-9E05-EF82CDD63166}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
-		<lastsavedtm>06/06/2004 17:37</lastsavedtm>
+		<lastsavedtm>06/13/2005 23:29</lastsavedtm>
 		<pagecount>200</pagecount>
 		<wordcount>2</wordcount>
 		<charcount/>
@@ -5865,17 +5866,17 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="2a625df1b3c2ef9457af97e74a82f941">changes.txt</td>
+			<td href="media/changes.txt" md5="a96838b4c33b9d9a53be45464fdbe343">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>61685</td>
+			<td>62602</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td href="media/dnetc.com" md5="61ed408cadfb6a3267bc39c4097f2628">dnetc.com</td>
+			<td href="media/dnetc.com" md5="bbdcdba591c5b522d92d26e8649efe89">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
 			<td>9728</td>
@@ -5885,21 +5886,21 @@ Click "Close" to exit.</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="3c362ed8bc3e239f936878716b8c71a9">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="79752c5035de2e143dbd276721b841f6">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
-			<td>211968</td>
-			<td>2.9010.495.0</td>
+			<td>214016</td>
+			<td>2.9012.497.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="609f6d8a9deb5398f10e1e4f9bd891f4">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="d7b126fc876fd4c6e6934de6aed056a3">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
 			<td>35328</td>
-			<td>2.9010.495.0</td>
+			<td>2.9012.497.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>1</td>
@@ -6036,7 +6037,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ERRCA_CANCELNEWERVERSION</td>
-			<td>NEWERPRODUCTFOUND AND NOT Installed</td>
+			<td>(NEWERPRODUCTFOUND) AND (NOT Installed)</td>
 			<td>201</td>
 		</row>
 		<row>
@@ -6136,7 +6137,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>RUNCA_CONFIG_DNETC</td>
-			<td>DNETC_RUNCONFIG AND NOT Installed</td>
+			<td>(DNETC_RUNCONFIG) AND (NOT Installed)</td>
 			<td>6850</td>
 		</row>
 		<row>
@@ -6166,7 +6167,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>RUNCA_UNINST_DNETC</td>
-			<td>Installed</td>
+			<td>REMOVE="ALL"</td>
 			<td>2001</td>
 		</row>
 		<row>
@@ -6688,7 +6689,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{18BDBDC5-EE72-4A60-A459-48AE6D43F4FB}</td>
+			<td>{372F5BDB-4E51-4809-853E-8A80DD3FC309}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6700,7 +6701,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>2.9010.495.0</td>
+			<td>2.9012.497.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
@@ -7569,7 +7570,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
-			<td>2.9010.495.0</td>
+			<td>2.9012.497.0</td>
 			<td/>
 			<td>260</td>
 			<td/>
