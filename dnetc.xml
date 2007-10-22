@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
-<?xml-stylesheet type="text/xsl" href="msi.xsl" ?>
-<!--
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?><?xml-stylesheet type="text/xsl" href="msi.xsl" ?><!--
       XML Dump of Windows Installer Database
       Created with msi2xml
 
       (C) 2001-2002 Daniel Gehriger (gehriger@linkcad.com)
--->
-<!DOCTYPE msi [
+--><!DOCTYPE msi [
    <!ELEMENT msi   (summary,table*)>
    <!ATTLIST msi version    CDATA #REQUIRED
                  xmlns:dt   CDATA #IMPLIED
@@ -53,8 +50,7 @@
                  href       CDATA #IMPLIED
                  dt:dt     (string|bin.base64) #IMPLIED
                  md5        CDATA #IMPLIED>
-]>
-<msi version="2.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" codepage="1252">
+]><msi version="2.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" codepage="1252">
 	
 	<summary>
 		<codepage>1252</codepage>
@@ -65,7 +61,7 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{C5147DB1-DC87-45AB-B0C4-488591766B68}</revnumber>
+		<revnumber>{569D8DDC-1DB1-44D4-A1C9-18D0BBB1302E}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
 		<lastsavedtm>06/13/2005 23:29</lastsavedtm>
@@ -5866,17 +5862,17 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="785f547b67409e1971b1eaaff09e070e">changes.txt</td>
+			<td href="media/changes.txt" md5="79d15613e352bbdf9a95651a95885233">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>62877</td>
+			<td>63638</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td href="media/dnetc.com" md5="c7e67274866451538ebe9c7aff3430ab">dnetc.com</td>
+			<td href="media/dnetc.com" md5="f2ba13e63822d701d2f982b93c3a9038">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
 			<td>9728</td>
@@ -5886,21 +5882,21 @@ Click "Close" to exit.</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="9c2a9ff00b7a5f8a3bff92568a7292bd">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="7a0ae2ab6e7d5434644b607ecba8d194">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
-			<td>539136</td>
-			<td>2.9013.498.0</td>
+			<td>214528</td>
+			<td>2.9013.500.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="4fbb66ba124421d27e52327ca16de1ba">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="44fc60498cc1d11d4a48ba62e23bd004">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
 			<td>35328</td>
-			<td>2.9013.498.0</td>
+			<td>2.9013.500.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>1</td>
@@ -6689,7 +6685,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{E5F7B7C7-34C9-4EB8-AC90-ACBE65BBF7C5}</td>
+			<td>{386E83F6-2265-48FC-9A0C-0390C64B8EA2}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6701,7 +6697,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>2.9013.498.0</td>
+			<td>2.9013.500.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
@@ -7570,7 +7566,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
-			<td>2.9013.498.0</td>
+			<td>2.9013.500.0</td>
 			<td/>
 			<td>260</td>
 			<td/>
