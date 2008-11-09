@@ -23,11 +23,53 @@ Version bump guide:
 Note: #xxxx refers to bug numbers as viewable on http://bugs.distributed.net/
 
 ==========================================================================
-Version change log: $Id: CHANGES.txt,v 1.14.2.116 2007/07/03 23:58:06 snikkel Exp $
+Version change log: $Id: CHANGES.txt,v 1.27 2008/10/27 10:20:34 oliver Exp $
 ==========================================================================
+
+2.9100
+------
+2.9101-507  new: all: Added OGR-NG contest 
+            chg: x86: RC5-72 core selection (#4072)
+            fix: x86: AMD CPU identification (#4073 and others)
+            fix: amd64: Fix bug preventing core pre-selection
+            imp: amd64: Fix issue preventing multi-processor client
+            chg: x86: GO2a core selected as default for P2
+            imp: ppc: Recognize PPC5200 (603e based SoC chip)
+            imp: amigaos: Use timezone prefs for DST detection on OS4
+            imp: ppc: Recognize PPC405 and PPC440 CPU variants
+
 
 2.9000
 ------
+2.9016-506  new: x86: added new RC5-72 core (GO 2-pipe alt), selected for
+                      P4 and Core Duo CPUs.
+            fix: cellbe: Memory corruption on heavy background activity
+                         when system is low on memory.
+            fix: cellbe: Workaround for broken SPU scheduler (#4038).
+            fix: all: Block lost if '-n 1' used on multi-cpu system (#4018).
+
+2.9015-505  fix: cellbe: Memory corruption in OGR core (#4036)
+            imp: x86: CPU Identification
+            imp: macosx: Add support for Intel temperature sensors
+
+2.9015-504  imp: cellbe: Tidy up cores for public source release
+            fix: x86: broken -stress on intel macosx (#4021)
+
+2.9015-503  imp: cellbe: Slightly faster SPE OGR core
+            fix: linux: Working fix for the race condition alluded to in the
+                        changelog for v2.9015-502
+            imp: x86: Faster OGR MMX cores (1-3%, depending on CPU)
+            chg: x86: OGR core selection for P4 (updated cores)
+
+2.9015-502  new: cellbe: Added SPE OGR cores
+            fix: linux: Fix race condition in heavily multithreaded
+                        scenarios causing the first cruncher to randomly
+                        stop running until client is restarted.
+            chg: x86: SGP-3 is default RC5-72 core for older P4's (#4009)
+            imp: x86: A little faster and stable speed of DG-3 and SGP-3 cores.
+
+2.9014-501  new: cellbe: New platform, PlayStation 3/Cell BE
+
 2.9013-500  imp: x86: Faster RC5-72 GO-2 core (#3265)
             chg: x86: GO-2 core is now the default selection for P4
             chg: x86: OGR core selection for P4 (#3988 and others)

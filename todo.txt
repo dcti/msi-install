@@ -16,3 +16,6 @@
   any problems caused by us doing this.  Maybe we should just
   skip "b" and make it 0?
 
+- To configure a service for delayed automatic start, you can create a
+  REG_DWORD value called DelayedAutoStart in the service's configuration
+  registry key under HKLM\SYSTEM\CurrentControlSet\Services.
