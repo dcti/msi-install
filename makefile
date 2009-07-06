@@ -33,7 +33,7 @@ $(MSILIB_DLL):	msilib\msilib.cpp
 # something that is textual and can be easily version controlled.
 $(DNETCMSI_DATABASE):		$(DNETCMSI_XML) $(MSILIB_DLL) $(DNETC_EXE)
 	$(XML2MSI_EXE) --ignore-md5 --package-code --product-code --product-version=$(DNETC_EXE) --upgrade-version --update-xml --output=$@ $(DNETCMSI_XML)
-	media\dnetc.com -version | find "dnetc v2" > verchk.tmp
+	media\dnetc.com -version | findstr "dnetc v2" > verchk.tmp
 	FOR /F "delims=- tokens=2" %i IN (verchk.tmp) DO move /y $(DNETCMSI_DATABASE) output\dnetc%i-win32-x86-setup.msi
 	del verchk.tmp
 
