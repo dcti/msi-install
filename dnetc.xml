@@ -5912,16 +5912,6 @@ Click "Close" to exit.</td>
 			<td>5</td>
 		</row>
 		<row>
-			<td href="media/readme.1st" md5="515d0f69f43a3186d8efcaed09732d90">readme.1st</td>
-			<td>ComponentDocs</td>
-			<td>README.1ST|readme.1st</td>
-			<td>1927</td>
-			<td/>
-			<td/>
-			<td>512</td>
-			<td>4</td>
-		</row>
-		<row>
 			<td href="media/readme.win32.html" md5="00ea916c4f4d328212d9ceac6d9069a2">readme.win32.html</td>
 			<td>ComponentDocs</td>
 			<td>README.HTM|readme.win32.html</td>
@@ -7264,20 +7254,6 @@ Click "Close" to exit.</td>
 			<td>ComponentDocsShortcuts</td>
 			<td>[TARGETDIR]readme.win32.html</td>
 			<td/>
-			<td/>
-			<td/>
-			<td/>
-			<td/>
-			<td>1</td>
-			<td>TARGETDIR</td>
-		</row>
-		<row>
-			<td>local0032</td>
-			<td>ProgramMenuDctiFolder</td>
-			<td>READ1ST.LNK|View compatibility information.lnk</td>
-			<td>ComponentDocsShortcuts</td>
-			<td>[WindowsFolder]notepad.exe</td>
-			<td>[TARGETDIR]readme.1st</td>
 			<td/>
 			<td/>
 			<td/>
