@@ -61,7 +61,7 @@
 		<comments>cows are cool!</comments>
 		<template>Intel;1033</template>
 		<lastauthor>jlawson</lastauthor>
-		<revnumber>{DBA3AAE0-AA73-40B3-B383-729C5F59B4E1}</revnumber>
+		<revnumber>{6A6F76E9-DF38-46CE-BC67-56C59A37EEAC}</revnumber>
 		<lastprinted>09/12/2003 23:37</lastprinted>
 		<createdtm>06/21/1999 02:00</createdtm>
 		<lastsavedtm>06/13/2005 23:29</lastsavedtm>
@@ -639,7 +639,7 @@
 		</row>
 		<row>
 			<td>MsiLib.dll</td>
-			<td href="streams/Binary.MsiLib.dll" md5="b8135a78a6eb1525a8b7129f8b988956"/>
+			<td href="streams/Binary.MsiLib.dll" md5="e928a5778354f232e7ee30de15cd7ce8"/>
 		</row>
 		<row>
 			<td>NewFldrBtn.bmp</td>
@@ -5862,17 +5862,17 @@ Click "Close" to exit.</td>
 		<col def="I2">Attributes</col>
 		<col def="i2">Sequence</col>
 		<row>
-			<td href="media/changes.txt" md5="c83493881db95af838ceb6a71fe7757a">changes.txt</td>
+			<td href="media/changes.txt" md5="24bd34ed504b5547783fde2c0d32097d">changes.txt</td>
 			<td>ComponentDocs</td>
 			<td>CHANGES.TXT|changes.txt</td>
-			<td>65706</td>
+			<td>68946</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>2</td>
 		</row>
 		<row>
-			<td href="media/dnetc.com" md5="18119870d970ffcc02e3513759725aa4">dnetc.com</td>
+			<td href="media/dnetc.com" md5="059670967dbbc9a7d372c23b1030fc62">dnetc.com</td>
 			<td>ComponentClient</td>
 			<td>DNETC.COM|dnetc.com</td>
 			<td>9728</td>
@@ -5882,40 +5882,40 @@ Click "Close" to exit.</td>
 			<td>7</td>
 		</row>
 		<row>
-			<td href="media/dnetc.exe" md5="0d12d13a005292b5e99ea7930124d3df">dnetc.exe</td>
+			<td href="media/dnetc.exe" md5="e207178910bbabe8c65f4b8557b77edc">dnetc.exe</td>
 			<td>ComponentClient</td>
 			<td>DNETC.EXE|dnetc.exe</td>
-			<td>544768</td>
-			<td>2.9101.507.0</td>
+			<td>551936</td>
+			<td>2.9108.517.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>6</td>
 		</row>
 		<row>
-			<td href="media/dnetc.scr" md5="6c87354f93485019a92b384e22d4d76c">dnetc.scr</td>
+			<td href="media/dnetc.scr" md5="f7b67e9da891d333c99eaedb7e4753d9">dnetc.scr</td>
 			<td>ComponentSaver</td>
 			<td>DNETC.SCR|dnetc.scr</td>
 			<td>35328</td>
-			<td>2.9101.507.0</td>
+			<td>2.9108.517.0</td>
 			<td>1033</td>
 			<td>512</td>
 			<td>1</td>
 		</row>
 		<row>
-			<td href="media/dnetc.txt" md5="b57e3a21f9389200cc6866daa5e8e95c">dnetc.txt</td>
+			<td href="media/dnetc.txt" md5="f0643bc27e44faa8263c42b0168b5c13">dnetc.txt</td>
 			<td>ComponentDocs</td>
 			<td>DNETC.TXT|dnetc.txt</td>
-			<td>15633</td>
+			<td>15314</td>
 			<td/>
 			<td/>
 			<td>512</td>
 			<td>5</td>
 		</row>
 		<row>
-			<td href="media/readme.win32.html" md5="00ea916c4f4d328212d9ceac6d9069a2">readme.win32.html</td>
+			<td href="media/readme.win32.html" md5="79655fbdd3e96dc9b28e4377bfbc8678">readme.win32.html</td>
 			<td>ComponentDocs</td>
 			<td>README.HTM|readme.win32.html</td>
-			<td>18382</td>
+			<td>17972</td>
 			<td/>
 			<td/>
 			<td>512</td>
@@ -6675,7 +6675,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductCode</td>
-			<td>{E1D8C905-3B59-496E-A591-3966CD84FF1F}</td>
+			<td>{50F6A090-E46F-4657-BD33-AD905EDD1EBF}</td>
 		</row>
 		<row>
 			<td>ProductLanguage</td>
@@ -6687,7 +6687,7 @@ Click "Close" to exit.</td>
 		</row>
 		<row>
 			<td>ProductVersion</td>
-			<td>2.9101.507.0</td>
+			<td>2.9108.517.0</td>
 		</row>
 		<row>
 			<td>SFF_DefBannerBitmap</td>
@@ -7542,7 +7542,7 @@ Click "Close" to exit.</td>
 		<row>
 			<td>{1EA24F15-F7BE-47C4-8100-F1A620C0FDD7}</td>
 			<td>1.0.0.0</td>
-			<td>2.9101.507.0</td>
+			<td>2.9108.517.0</td>
 			<td/>
 			<td>260</td>
 			<td/>

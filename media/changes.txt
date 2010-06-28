@@ -12,7 +12,7 @@ Version bump guide:
   | | |   `----- Changes in /common/ code, or simply a significant number
   | | |          of bug fixes, gets a "build fraction" change.
   | | `--------- New cores, for any platform, will be accompanied by a
-  | |            "build version" change, ie 2.7103.x to 2.7104.x.
+  | |            "build version" change, ie 2.7103.x to 2.7104.x+1.
   | |            New significant feature(s) also increment build version.
   | `----------- A "client contest" change follows a code freeze at which
   |              point the client is assumed to be stable. Code that
@@ -23,11 +23,94 @@ Version bump guide:
 Note: #xxxx refers to bug numbers as viewable on http://bugs.distributed.net/
 
 ==========================================================================
-Version change log: $Id: CHANGES.txt,v 1.27 2008/10/27 10:20:34 oliver Exp $
+Version change log: $Id: CHANGES.txt,v 1.92 2010/03/17 18:22:06 stream Exp $
 ==========================================================================
 
 2.9100
 ------
+
+2.9108-517  imp: x86: new OGR-NG 32- and 64-bit cores (#4256)
+            imp: x86: identification of new i5/i7 chips (#4271)
+            imp: rc5-72: random subspace prefix could be stored in .ini file
+            imp: stream: faster rc5-72 core for HD5xxx GPUs
+            imp: cellbe: faster OGR-NG SPU ASM core
+
+2.9107-516  imp: add cpu/os id to client request packets
+                 for improved client control
+            chg: cuda,stream: remove beta expiry
+            new: stream: new rc5-72 2th core (#4278)
+            fix: stream: Win RDP connection crash (#4235)
+            chg: x86: default rc5-72 core selection for some cpus (#4193)
+
+2.9107-515  imp: cellbe: faster OGR-NG SPU ASM core
+
+2.9106-514  fix: all: cannot run test or bench if OS doesn't support
+                      cpu count detection.
+            imp: x86: Via C7-D/M Model D detection (#4246)
+            fix: stream: rc5-72 added Catalyst 9.9 support
+            fix: some: one thread stays asleep in 'pause when running' (#4248)
+            fix: haiku: ps output changed, preventing shutdown of other dnetc
+                      instances (#4173)
+            imp: sparc/solaris: UltraSPARC-T2+ detection (#4250)
+
+2.9106-513  new: amd64: two new asm ogr64 cores added and selected 
+                        as default (#4183)
+            new: x86: new rc5-72 go-2b core (#4193)
+            chg: amd64: drop ansi rc5-72 cores
+            chg: amd64: rc5-72 core selection for Atom
+            fix: amd64: ogr core selection for Athlon (#4214)
+            fix: amd64: rc5-72 core selection for Core i7 (#3817)
+            imp: cuda: support CUDA 2.3
+            fix: some: busy loop in polling subsystem while paused (#4148)
+            imp: ppc: recognize more PowerPC processors
+
+2.9105-512  fix: cuda: version increment to identify compiler bug (#4201)
+            chg: cuda: switch to CUDA 2.2
+            chg: cuda: drop support for buggy toolkit 2.0/2.1
+
+2.9105-511  fix: ppc: Fixed scalar and hybrid OGR-NG cores (#4187)
+            imp: cellbe: detect linux kernel SPU scheduler (spufs) bugs
+            new: linux: runs-on-battery-power detection via sysfs
+
+2.9104-510  imp: all: handle lack of a supported cpu/gpu more gracefully
+            imp: gpgpu: terminate on unsupported driver/library installations
+            imp: gpgpu: raise rc5-72 buffer limit to 10000
+            new: cuda: switch to CUDA 2.1 (Linux and Windows only)
+            new: cuda: bundle runtime library (libcudart.so.2/libcudart.dylib/
+                       cudart.dll) with the released client
+            imp: cuda: log errors to logfile (if enabled)
+            new: x86: three OGR-NG SSE2 ASM cores from Craig Johnston (#4177)
+            imp: cellbe: faster OGR-NG SPU ASM core
+
+2.9103-509  *** minimal version that supports OGR-27 and beyond ***
+            new: rc5-72: support for requesting larger packets (#3918)
+            new: stream: RC5-72 core for ATI Stream video cards (#4099)
+            imp: x86: Intel Atom (#4080)
+            imp: x86: Pentium III detection (#4121)
+            imp: x86: Intel Core i7 detection (#4118)
+            fix: x86: Various AMD CPU Detections (#4074 & #4120)
+            fix: all: Fix OGR-NG middle mark limit miscalculation on odd rulers 
+            fix: all: OGR-NG state restored properly after a restart
+            fix: linux: Improved OGR-NG cache management (#4076)
+            imp: all: Print combined OGR-NG stubs with more details (#4082)
+            fix: all: Combined OGR-NG stubs no longer appear to restart (#4083)
+            new: arm: OGR-NG ASM cores
+            imp: all: Summarized benchmark results (#4108)
+            new: hppa: Added support for openbsd-hppa
+            new: mips: Added support for openbsd-sgi
+            new: sparc64: Added support for openbsd-sparc64
+            fix: sparc64: fixed netbsd-sparc64 target
+            fix: win64: installation and execution as service (#4130)
+
+2.9102-508  new: x86: OGR-NG mmx core
+            new: cellbe: OGR-NG SPU C core
+            new: cellbe: OGR-NG SPU ASM core
+            new: cuda: RC5-72 core for nVidia CUDA video cards (#4030)
+            new: haiku: Added support for Haiku operating system
+            fix: beos: Fix bug in network code preventing server communication
+            imp: x86: Identify AMD "Unknown" processors (#4106)
+            fix: x86: Pentium M naming (#4075)
+
 2.9101-507  new: all: Added OGR-NG contest 
             chg: x86: RC5-72 core selection (#4072)
             fix: x86: AMD CPU identification (#4073 and others)
@@ -267,7 +350,7 @@ Version change log: $Id: CHANGES.txt,v 1.27 2008/10/27 10:20:34 oliver Exp $
             new: os2: "pause-when-running" enabled
             new: os2: more command line options (-shutdown, ...)
             new: x86: rc5-72 assembly cores by Samuel Seay
-            new: x86: rc5-72 assembly cores by Décio Luiz Gazzoni Filho
+            new: x86: rc5-72 assembly cores by Decio Luiz Gazzoni Filho
 
 2.9000-475  new: all: contest rc5-72
             chg: all: new buffer format (incompatible with previous 
@@ -469,7 +552,7 @@ Version change log: $Id: CHANGES.txt,v 1.27 2008/10/27 10:20:34 oliver Exp $
             new: "pause-if-running-on-batterypower" (not on all platforms)
             new: macosx: a native (BSD subsystem) client for Server and DPs
             chg: some: OGR is auto-disabled for non-preemptive OSs running on 
-                 low-end cpus. http://www.distributed.net/faq/cache/188.html
+                 low-end cpus. http://faq.distributed.net/cache/188.html
             fix: NetWare: all MP (migration) issues resolved.     
             fix: most: user changes to time-of-day won't affect "Summary:"
             chg: AmigaOS: updated 68k cores and many changes made to bring
@@ -487,7 +570,7 @@ Version change log: $Id: CHANGES.txt,v 1.27 2008/10/27 10:20:34 oliver Exp $
                  provides better control and supports one new mode
                  "update on per-project buffer exhaustion" which enables
                  old-style single-contest crunching (disables rotation).
-                 See also: http://www.distributed.net/faq/cache/176.html
+                 See also: http://faq.distributed.net/cache/176.html
             new: all: out-buffer thresholds have been removed entirely;
                  use the "additional buffer-level checking" to support
                  updating/flushing more frequently than buffer exhaustion.
